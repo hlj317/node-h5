@@ -55,4 +55,5 @@
     }
 
     await server.startup(router, 10086);
+
 })();
