@@ -6,6 +6,7 @@
     const koaLog = require('koa-log');
     const conditional = require('koa-conditional-get');
 
+    const config = require('./config/config');
     const route = require('./app/route');
     const middleware = require('./app/helpers/middleware');
     const helperView = require('./app/helpers/view');
@@ -18,6 +19,8 @@
         extname: 'html',
         commands: helperView
     }));
+
+    const productionAsset = config.productionAsset;
 
     // 添加默认首页
     server.use(middleware.indexRewrite());
@@ -39,6 +42,7 @@
     server.use(middleware.errorRedirect);
 
     server.use(async (ctx, next) => {
+        ctx.state.productionAsset = productionAsset;
         // view 中的全局变量
         ctx.state.path = ctx.path.slice(1); // 去掉后缀.html,用于页面上自动载于静态资源
         return next();
