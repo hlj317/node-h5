@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "index.web.js",
   "scripts": {
-    "pm2:start": "pm2 startOrRestart ./server/ecosystem/ecosystem.json",
-    "pm2:restart": "pm2 delete all && npm run pm2:start",
+    "start": "pm2 startOrRestart ./server/ecosystem/ecosystem.json",
+    "restart": "pm2 delete all && npm run pm2:start",
     "dev": "./node_modules/.bin/webpack-dev-server --config ./bin/build/webpack.dev.conf.js --port 8000",
     "build:libs": "cross-env NODE_ENV=production webpack --config ./bin/build-libs/webpack.libs.conf.js",
     "build": "npm run clean && npm run build:js",
