@@ -5,9 +5,9 @@
       "script"     : "/data/webroot/node-h5/index.web.js",
       "instances"  : 1,
       "exec_mode"  : "fork",
-      "out_file"   : "/tmp/node-h5/${PROJECT}_out.log",
-      "error_file" : "/tmp/node-h5/${PROJECT}_err.log",
-      "log_file"   : "/tmp/node-h5/${PROJECT}_log.log",
+      "out_file"   : "/tmp/node-h5/node-h5_out.log",
+      "error_file" : "/tmp/node-h5/node-h5_err.log",
+      "log_file"   : "/tmp/node-h5/node-h5_log.log",
       "env": {
         "NODE_ENV": "dev"
       },
@@ -18,9 +18,9 @@
       "script"     : "/data/webroot/node-h5/index.web.js",
       "instances"  : 1,
       "exec_mode"  : "fork",
-      "out_file"   : "/tmp/node-h5/${PROJECT}_out.log",
-      "error_file" : "/tmp/node-h5/${PROJECT}_err.log",
-      "log_file"   : "/tmp/node-h5/${PROJECT}_log.log",
+      "out_file"   : "/tmp/node-h5/node-h5_out.log",
+      "error_file" : "/tmp/node-h5/node-h5_err.log",
+      "log_file"   : "/tmp/node-h5/node-h5_log.log",
       "env": {
         "NODE_ENV": "production"
       },
