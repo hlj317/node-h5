@@ -24,7 +24,7 @@ let config = merge(baseConfig, prodConfig, {
         new ManifestPlugin({
             fileName: 'manifest.json',
             seed: manifest,
-            publicPath: '',
+            publicPath: '/',
         }),
     ],
     

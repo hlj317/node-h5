@@ -7,7 +7,7 @@ let url = function (scope, option) {
     const publicAsset = manifest[option.params[0]];
     let path = null;
     if (productionAsset) {
-        path = '/' + publicAsset;
+        path = publicAsset;
     } else {
         path = `${devStaticHost}/${option.params[0]}`;
     }
