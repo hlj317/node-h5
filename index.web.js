@@ -54,6 +54,6 @@
         router.get(urlPath, controller);
     }
 
-    await server.startup(router, 10086);
+    await server.startup(router, 80);
 
 })();
