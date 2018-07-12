@@ -1,0 +1,17 @@
+{
+  "apps" : [
+    {
+      "name"       : "node-h5-service",
+      "script"     : "/data/webroot/node-h5/index.web.js",
+      "instances"  : 1,
+      "exec_mode"  : "fork",
+      "out_file"   : "/tmp/node-h5/${PROJECT}_out.log",
+      "error_file" : "/tmp/node-h5/${PROJECT}_err.log",
+      "log_file"   : "/tmp/node-h5/${PROJECT}_log.log",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "watch": true
+    }
+ ]
+}

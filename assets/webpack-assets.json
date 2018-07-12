@@ -1,0 +1,13 @@
+{
+  "demo/animate": {
+    "js": "/assets/static/demo/animate-51466b8b.js",
+    "css": "/assets/static/demo/animate-80d94d19.css"
+  },
+  "": {
+    "json": "/manifest.json"
+  },
+  "demo/hello": {
+    "js": "/assets/static/demo/hello-a64f4219.js",
+    "css": "/assets/static/demo/hello-69074911.css"
+  }
+}
