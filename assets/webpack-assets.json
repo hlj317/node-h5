@@ -9,5 +9,9 @@
   "demo/hello": {
     "js": "/assets/static/demo/hello-a64f4219.js",
     "css": "/assets/static/demo/hello-fe02f5bc.css"
+  },
+  "demo/hlj": {
+    "js": "/assets/static/demo/hlj-49e7e5f3.js",
+    "css": "/assets/static/demo/hlj-33e9d5d6.css"
   }
 }
