@@ -1,30 +1,14 @@
 @import "~src/common/less/common.less";
-
-@b: @g-base;
-
-html{
-    background-color: rgba(0, 0, 0, 0.7);
+* {
+    margin: 0;
+    padding: 0
 }
-.wrapper {
-    width: 137/@b;
-    height: 137/@b;
-    border-radius: 137/@b;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html {
+    height: 100%;
 }
-.show-wrapper{
-    width: 137/@b;
-    height: 137/@b;
-    overflow: hidden;
-    border-radius: 100%;
-    // position: absolute; left: 50%; top: 50%;
-    // transform: translate(-50%, -50%);
-    display: inline-block;
-    background-size: 100% 100%;
-    animation: jump 1s infinite steps(2);
-}
-.hello {
-    color: red;
+body {
+    box-sizing: border-box;
+    padding-bottom: 12/@b;
+    min-height: 100%;
+    background: #f9efff;
 }
