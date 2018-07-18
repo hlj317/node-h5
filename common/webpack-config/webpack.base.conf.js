@@ -50,7 +50,7 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
             alias: {
                 src: 'src',
             },
-            suffixs: ['js', 'less', 'vue'],
+            suffixs: ['js', 'less', 'vue','css'],
             blackList,
             makeStandardEnteies(sEntries) {
                 let formatEntries = {};
@@ -112,6 +112,15 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                     test: /\.js$/,
                     loader: 'happypack/loader?id=babel',
                 },
+                {
+                    test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                    use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000
+                    }
+                    }]
+                }
             ],
         },
         plugins: [
