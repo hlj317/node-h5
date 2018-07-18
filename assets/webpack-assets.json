@@ -4,18 +4,23 @@
     "css": "/assets/static/demo/animate-80d94d19.css"
   },
   "": {
-    "json": "/manifest.json"
+    "json": "/manifest.json",
+    "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-2e5fe2ba.js",
-    "css": "/assets/static/demo/hello-1b2d78df.css"
+    "css": "/assets/static/demo/hello-eed49732.css"
   },
   "demo/hlj": {
     "js": "/assets/static/demo/hlj-acdd2fea.js",
-    "css": "/assets/static/demo/hlj-1b2d78df.css"
+    "css": "/assets/static/demo/hlj-eed49732.css"
   },
   "guess": {
     "js": "/assets/static/guess-43765eb6.js",
-    "css": "/assets/static/guess-cfd879aa.css"
+    "css": "/assets/static/guess-eed49732.css"
+  },
+  "cms": {
+    "js": "/assets/static/cms-7039a93f.js",
+    "css": "/assets/static/cms-eed49732.css"
   }
 }
