@@ -13,7 +13,7 @@
     .ad {
         position: relative;
         width: 750/@b;
-        height: 445/@b;
+        height: 410/@b;
         .second-kill{
             position: absolute;
             left:0;

@@ -117,6 +117,8 @@ export default {
         },
         // 开始猜价格按钮
         guessNow(type) {
+            this.rspData.count++;
+            return;
             if (type === 3) {
                 return note('活动已结束', closeTime);
             }
