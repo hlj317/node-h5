@@ -9,18 +9,18 @@
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-2e5fe2ba.js",
-    "css": "/assets/static/demo/hello-eed49732.css"
+    "css": "/assets/static/demo/hello-a33ea82d.css"
   },
   "demo/hlj": {
     "js": "/assets/static/demo/hlj-acdd2fea.js",
-    "css": "/assets/static/demo/hlj-eed49732.css"
+    "css": "/assets/static/demo/hlj-a33ea82d.css"
   },
   "guess": {
     "js": "/assets/static/guess-b06dcccf.js",
-    "css": "/assets/static/guess-15ef9f7f.css"
+    "css": "/assets/static/guess-a33ea82d.css"
   },
   "cms": {
     "js": "/assets/static/cms-7039a93f.js",
-    "css": "/assets/static/cms-eed49732.css"
+    "css": "/assets/static/cms-a33ea82d.css"
   }
 }
