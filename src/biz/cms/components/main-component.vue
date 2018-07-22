@@ -1,0 +1,42 @@
+<template>
+    <div id="mainComponent">
+        <el-row v-show="isShow(item.type)" v-for="(item, index) in items" :key="index">
+            {{item.html}}
+        </el-row>
+    </div>
+</template>
+
+  <script>
+    export default {
+      name:'mainComponent',
+      data() {
+        return {
+
+        }
+      },
+      methods:{
+
+      },
+      props:[
+          'items',
+          'isShow'
+      ]
+    }
+  </script>
+
+<style>
+
+.transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #409EFF;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+</style>

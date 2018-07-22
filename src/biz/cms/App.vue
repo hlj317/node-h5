@@ -1,77 +1,22 @@
 <template>
   <el-container id="app" class="el-container">
-    <el-aside class="el-aside">
-      <el-menu :default-openeds="['1']" :default-active="1-1" unique-opened=true >
-        <el-submenu index="1">
-          <template slot="title"><i class="el-icon-message"></i>Basic</template>
-            <el-menu-item :index="1-1">Layout布局</el-menu-item>
-            <el-menu-item index="1-2">Container布局容器</el-menu-item>
-            <el-menu-item index="1-3">Icon图标</el-menu-item>
-            <el-menu-item index="1-4">Button按钮</el-menu-item>
-        </el-submenu>
-        <el-submenu index="2">
-          <template slot="title"><i class="el-icon-menu"></i>Form</template>
-            <el-menu-item index="2-1">Radio单选框</el-menu-item>
-            <el-menu-item index="2-2">Checkbox多选框</el-menu-item>
-            <el-menu-item index="2-3">Input输入框</el-menu-item>
-            <el-menu-item index="2-4">Slider滑块</el-menu-item>
-            <el-menu-item index="2-5">Rate评分</el-menu-item>
-        </el-submenu>
-        <el-submenu index="3">
-          <template slot="title"><i class="el-icon-setting"></i>Data</template>
-            <el-menu-item index="3-1">Table表格</el-menu-item>
-            <el-menu-item index="3-2">Tree树形控件</el-menu-item>
-            <el-menu-item index="3-3">Pagination分页</el-menu-item>
-        </el-submenu>
-        <el-submenu index="4">
-          <template slot="title"><i class="el-icon-tickets"></i>Notice</template>
-            <el-menu-item index="4-1">Alert警告</el-menu-item>
-            <el-menu-item index="4-2">Loading加载</el-menu-item>
-            <el-menu-item index="4-3">Message消息提示</el-menu-item>
-            <el-menu-item index="4-4">Notification通知</el-menu-item>
-        </el-submenu>
-        <el-submenu index="5">
-          <template slot="title"><i class="el-icon-date"></i>Navigation</template>
-            <el-menu-item index="5-1">NavMenu导航菜单</el-menu-item>
-            <el-menu-item index="5-2">Tabs标签页</el-menu-item>
-            <el-menu-item index="5-3">Breadcrumb面包屑</el-menu-item>
-            <el-menu-item index="5-4">Steps步骤条</el-menu-item>
-        </el-submenu>
-        <el-submenu index="6">
-          <template slot="title"><i class="el-icon-view"></i>Others</template>
-            <el-menu-item index="6-1">Dialog对话框</el-menu-item>
-            <el-menu-item index="6-2">Popover弹出框</el-menu-item>
-            <el-menu-item index="6-3">Card卡片</el-menu-item>
-            <el-menu-item index="6-4">Carousel走马灯</el-menu-item>
-            <el-menu-item index="6-5">Collapse折叠面板</el-menu-item>
-        </el-submenu>
-      </el-menu>
-    </el-aside>
-  
+    <aside-component></aside-component>
     <el-container>
-      <el-header style="text-align: right; font-size: 12px">
-        <el-row>
-          <el-col :span="6"><div class="grid-content" v-bind:class="{selected:selectedNav === 'effect'}" ><i class="el-icon-info"></i><a href="#" v-on:click="navSwitch('effect')">效果</a></div></el-col>
-          <el-col :span="6"><div class="grid-content" v-bind:class="{selected:selectedNav === 'code'}" ><i class="el-icon-info"></i><a href="#" v-on:click="navSwitch('code')">代码</a></div></el-col>
-          <el-col :span="6"><div class="grid-content" v-bind:class="{selected:selectedNav === 'api'}" ><i class="el-icon-info"></i><a href="#" v-on:click="navSwitch('api')">文档</a></div></el-col>
-          <el-col :span="6"><div class="grid-content" v-bind:class="{selected:selectedNav === 'remark'}" ><i class="el-icon-info"></i><a href="#" v-on:click="navSwitch('remark')">备注</a></div></el-col>
-        </el-row>
+      <el-header>
+        <headerComponent 
+          :navSwitch="navSwitchFun"
+          :items="myData"
+          :isSelected="isSelected"
+          >
+        </headerComponent>
       </el-header>
       
       <el-main>
 
-          <el-row v-if="type === 'effect'">
-            <layoutComponent></layoutComponent>
-          </el-row>
-          <el-row v-else-if="type === 'code'">
-            {{html}}
-          </el-row>
-          <el-row v-else-if="type === 'api'">
-            暂无
-          </el-row>
-          <el-row v-else>
-            暂无
-          </el-row>
+        <main-component
+          :items="myData"
+          :isShow="isShow"
+        ></main-component>
         
       </el-main>
 
@@ -82,23 +27,63 @@
 </template>
 
 <script>
-import layoutComponent from './components/layout-component.vue'
+import asideComponent from './components/aside-component.vue'
+import headerComponent from './components/header-component.vue'
+import mainComponent from './components/main-component.vue'
 export default {
     data() {
       return {
-        type:'effect',
-        html:'<el-row :gutter="20"><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col></el-row>',
-        selectedNav : 'effect'
+        show: true,
+        selectedNav : 'effect',
+        myData:[
+          {
+            'type':'effect',
+            'name':'效果',
+            'column':6,
+            'html':'暂无'
+          },
+          {
+            'type':'code',
+            'name':'代码',
+            'column':6,
+            'html':'<el-row :gutter="20"><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col><el-col :span="6"><div class="grid-content bg-purple"></div></el-col></el-row>'
+          },
+          {
+            'type':'api',
+            'name':'文档',
+            'column':6,
+            'html':'暂无2'
+          },
+          {
+            'type':'remark',
+            'name':'备注',
+            'column':6,
+            'html':'暂无3'
+          }
+        ]
       }
     },
+
     methods:{
-        navSwitch:function(nav){
+        navSwitchFun:function(nav){
            this.type = nav;
            this.selected = nav;
            this.selectedNav = nav;
+        },
+        isSelected:function(type){
+          return {
+            'selected': this.selectedNav === type
+          };
+        },
+        isShow:function(type){
+          return this.selectedNav === type;
         }
     },
-    components: {layoutComponent}
+    components: {
+      asideComponent,
+      headerComponent,
+      mainComponent
+    }
 }
 </script>
 
@@ -106,6 +91,7 @@ export default {
   .el-container{
      height: 550px; 
      border: 1px solid #eee;
+     font-size:12px;
   }
   .el-aside{
      width:200px;
@@ -115,6 +101,8 @@ export default {
     background-color: #B3C0D1;
     color: #666666;
     line-height: 60px;
+    text-align: right; 
+    font-size: 12px;
   }
 
  .el-row {
@@ -152,4 +140,24 @@ export default {
   .el-aside {
     color: #333;
   }
+
+  .container-title{
+    color:#333333;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+.transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #409EFF;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
 </style>
