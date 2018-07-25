@@ -1,11 +1,11 @@
 {
   "demo/hello.js": "/assets/static/demo/hello-2e5fe2ba.js",
-  "demo/hello.css": "/assets/static/demo/hello-a33ea82d.css",
+  "demo/hello.css": "/assets/static/demo/hello-0d60ea71.css",
   "demo/hlj.js": "/assets/static/demo/hlj-acdd2fea.js",
-  "demo/hlj.css": "/assets/static/demo/hlj-a33ea82d.css",
-  "guess.js": "/assets/static/guess-b06dcccf.js",
-  "guess.css": "/assets/static/guess-a33ea82d.css",
-  "cms.js": "/assets/static/cms-11af9ca9.js",
-  "cms.css": "/assets/static/cms-45c01775.css",
+  "demo/hlj.css": "/assets/static/demo/hlj-0d60ea71.css",
+  "guess.js": "/assets/static/guess-e7d78a96.js",
+  "guess.css": "/assets/static/guess-0d60ea71.css",
+  "cms.js": "/assets/static/cms-1a8d5740.js",
+  "cms.css": "/assets/static/cms-0d60ea71.css",
   "element-icons.ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
 }

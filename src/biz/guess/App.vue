@@ -1,7 +1,7 @@
 <template>
     <div id="guess" class="guess-page">
         <Banner :showrule="showRuleModel"></Banner>
-        <Main :count="rspData.count"
+        <Main :count="countNum"
             :end="rspData.end"
             :guessNow="guessNow"
             :award="rspData.award"
@@ -78,7 +78,8 @@ export default {
             showInput: false,
             rspData: {
             },
-            adData: []
+            adData: [],
+            countNum:0
         }
     },
     components: {
@@ -97,7 +98,7 @@ export default {
         }
     },
     created() {
-        this.init(resData.data);
+        this.init(resData.data);  
     },
     methods:{
         init(data) {
@@ -106,6 +107,7 @@ export default {
             this.adData = this.getAdData(function(resData){
                 return resData;
             });
+            this.getCount();
         },
         // 查看规则弹窗
         showRuleModel() {
@@ -117,8 +119,10 @@ export default {
         },
         // 开始猜价格按钮
         guessNow(type) {
-            this.rspData.count++;
+
+            this.addCount();
             return;
+
             if (type === 3) {
                 return note('活动已结束', closeTime);
             }
@@ -141,8 +145,41 @@ export default {
                 }});
             }
         },
+
+        //添加次数
+        addCount(){
+            axios.get('/guess/addCount',{
+                params:{
+                    uid:'hlj317'
+                },
+                responseType: 'json'
+            })
+            .then(res =>{
+                this.countNum = res.data.count;
+            })
+            .catch(function(err){
+                console.log(err);
+            });    
+        },
+
+        //获取次数
+        getCount(callback){
+            axios.get('/guess/getCount',{
+                params:{
+                    uid:'hlj317'
+                },
+                responseType: 'json'
+            })
+            .then(res =>{
+               this.countNum = res.data.count;
+            })
+            .catch(function(err){
+                console.log(err);
+            });    
+        },
+
         //获取广告数据
-        getAdData(callback){
+        getAdData(){
             let that = this;
             axios.get('https://dsapi.beibei.com/ads/h5.html',{
                 params:{
@@ -162,8 +199,9 @@ export default {
             })
             .catch(function(err){
                 console.log(err);
-            });    
+            });  
         },
+
         // 数据格式化
         formatData(data) {
             const guessStatus = {
