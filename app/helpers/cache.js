@@ -1,10 +1,11 @@
 const Redis = require('ioredis');
-
-const keyPrefix = "xiaohuangren_"
+const config = require('../../config/config');
+const keyPrefix = 'xiaohuangren_';
+const env = process.env.NODE_ENV || 'dev';
 
 let client = new Redis({
-    host: '127.0.0.1',
-    port: 6379
+    host: config[env].redis.host,
+    port: config[env].redis.port
 },);
 
 const EXPIRE_TIME = 86400;
