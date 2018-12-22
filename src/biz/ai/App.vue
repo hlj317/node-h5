@@ -151,7 +151,7 @@ export default {
       this.vest_title = "正在思考中...";
       setTimeout(() => {
         let val = this.my_team;
-        this.vest_title = this.getTitle(val.trim());
+        this.vest_title = this.getTitle(val.trim().toUpperCase());
       }, 1500);
     },
     getTitle(val) {
