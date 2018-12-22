@@ -1,30 +1,54 @@
 {
+  "bear": {
+    "js": "/assets/static/bear-dcff003f.js",
+    "css": "/assets/static/bear-93bc7659.css"
+  },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
+  },
+  "demo/hello": {
+    "js": "/assets/static/demo/hello-5226536e.js",
+    "css": "/assets/static/demo/hello-93bc7659.css"
+  },
+  "demo/hlj": {
+    "js": "/assets/static/demo/hlj-80883714.js",
+    "css": "/assets/static/demo/hlj-93bc7659.css"
+  },
+  "guess": {
+    "js": "/assets/static/guess-93c75e4a.js",
+    "css": "/assets/static/guess-93bc7659.css"
+  },
+  "cms": {
+    "js": "/assets/static/cms-c6bce7e9.js",
+    "css": "/assets/static/cms-93bc7659.css"
   },
   "": {
     "json": "/manifest.json",
     "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
   },
-  "demo/hello": {
-    "js": "/assets/static/demo/hello-2e5fe2ba.js",
-    "css": "/assets/static/demo/hello-0d60ea71.css"
+  "register": {
+    "js": "/assets/static/register-9c9ab435.js",
+    "css": "/assets/static/register-93bc7659.css"
   },
-  "demo/hlj": {
-    "js": "/assets/static/demo/hlj-acdd2fea.js",
-    "css": "/assets/static/demo/hlj-0d60ea71.css"
+  "movie": {
+    "js": "/assets/static/movie-c7b5ef3d.js",
+    "css": "/assets/static/movie-93bc7659.css"
   },
-  "guess": {
-    "js": "/assets/static/guess-e7d78a96.js",
-    "css": "/assets/static/guess-0d60ea71.css"
+  "login": {
+    "js": "/assets/static/login-dd4db1b3.js",
+    "css": "/assets/static/login-93bc7659.css"
   },
-  "cms": {
-    "js": "/assets/static/cms-1a8d5740.js",
-    "css": "/assets/static/cms-0d60ea71.css"
+  "error/404": {
+    "js": "/assets/static/error/404-2ec1ed2c.js",
+    "css": "/assets/static/error/404-93bc7659.css"
   },
-  "bear": {
-    "js": "/assets/static/bear-ffffd45c.js",
-    "css": "/assets/static/bear-61a5cf08.css"
+  "detail": {
+    "js": "/assets/static/detail-c23dd6ed.js",
+    "css": "/assets/static/detail-93bc7659.css"
+  },
+  "ai": {
+    "js": "/assets/static/ai-de24700a.js",
+    "css": "/assets/static/ai-93bc7659.css"
   }
 }
