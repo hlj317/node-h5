@@ -4,6 +4,7 @@
     const Router = require('koa-router');
     const etag = require('koa-etag');
     const koaLog = require('koa-log');
+    const bodyParser = require('koa-bodyparser');
     const conditional = require('koa-conditional-get');
 
     const config = require('./config/config');
@@ -12,6 +13,12 @@
     const helperView = require('./app/helpers/view');
 
     const server = new Server();
+
+    const mysql = require('./app/models/common/mysql.js');
+    // const redis = require('./app/service/common/redis.js');
+
+    mysql.init();
+    // redis.init();
 
     // 添加模板引擎
     server.use(Xtpl({
@@ -36,7 +43,7 @@
     server.use(middleware.staticMount());
     // 添加日志记录
     server.use(koaLog('common'));
-    // 添加页面CND中间件
+    // 添加页面CDN中间件
     server.use(middleware.pageCache);
     // 添加错误重定向中间件
     server.use(middleware.errorRedirect);
@@ -48,6 +55,9 @@
         return next();
     });
 
+    //支持post的body解析
+    server.use(bodyParser());
+
     // 从路由注册表中获取路由
     const router = new Router();
 
@@ -55,9 +65,12 @@
     for (let urlPath in route) {
         controller = route[urlPath];
 
-        router.get(urlPath, controller);
+        router.all(urlPath, controller);
     }
 
     await server.startup(router, 8080);
+
+    // POST请求都需要有登录态
+    server.use(middleware.checkLogin); 
 
 })();

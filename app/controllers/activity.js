@@ -5,6 +5,14 @@ const guess = async function (ctx, next) {
     return next();
 };
 
+const bear = async function (ctx, next) {
+    await ctx.render('activity/bear', {
+        title: '贝贝熊过关小游戏',
+    });
+    return next();
+};
+
 module.exports = {
-    guess
+    guess,
+    bear
 };

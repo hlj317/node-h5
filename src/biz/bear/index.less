@@ -1,0 +1,403 @@
+@import "../common/less/common.less";
+* {
+    margin: 0;
+    padding: 0
+}
+html {
+    height: 100%;
+}
+body
+{
+    box-sizing: border-box;
+    min-height: 100%;
+    background: #ffffff;
+}
+
+@-webkit-keyframes animLand {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -335/@base 0px; }
+ }
+ @-moz-keyframes animLand {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -335/@base 0px; }
+ }
+ @-o-keyframes animLand {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -335/@base 0px; }
+ }
+ @keyframes animLand {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -335/@base 0px; }
+ }
+ 
+ @-webkit-keyframes animSky {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -275/@base 100%; }
+ }
+ @-moz-keyframes animSky {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -275/@base 100%; }
+ }
+ @-o-keyframes animSky {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -275/@base 100%; }
+ }
+ @keyframes animSky {
+    0% { background-position: 0px 100%; }
+    100% { background-position: -275/@base 100%; }
+ }
+ 
+ @-webkit-keyframes animBird {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -96/@base; }
+ }
+ @-moz-keyframes animBird {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -96/@base; }
+ }
+ @-o-keyframes animBird {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -96/@base; }
+ }
+ @keyframes animBird {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -96/@base; }
+ }
+ 
+ @-webkit-keyframes animPipe {
+    0% { left: 900/@base; }
+    100% { left: -100/@base; }
+ }
+ @-moz-keyframes animPipe {
+    0% { left: 900/@base; }
+    100% { left: -100/@base; }
+ }
+ @-o-keyframes animPipe {
+    0% { left: 900/@base; }
+    100% { left: -100/@base; }
+ }
+ @keyframes animPipe {
+    0% { left: 900/@base; }
+    100% { left: -100/@base; }
+ }
+ 
+ @-webkit-keyframes animCeiling {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -63/@base 0px; }
+ }
+ @-moz-keyframes animCeiling {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -63/@base 0px; }
+ }
+ @-o-keyframes animCeiling {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -63/@base 0px; }
+ }
+ @keyframes animCeiling {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -63/@base 0px; }
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after
+ {
+    /* border box */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* gpu acceleration */
+    -webkit-transition: translate3d(0,0,0);
+    /* select disable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+ 
+ #gamecontainer
+ {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 1334/@base;
+ }
+ 
+ /*
+ Screen - Game
+ */
+ #gamescreen
+ {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ #sky
+ {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    background-image: url('../../../assets/static/imgs/bear/sky.png');
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    background-color: #4ec0ca;
+    
+    -webkit-animation: animSky 7s linear infinite;
+    animation: animSky 7s linear infinite;
+ }
+ 
+ #flyarea
+ {
+    position: absolute;
+    bottom: 0;
+    height: 840/@base;
+    width: 100%;
+ }
+ 
+ #ceiling
+ {
+    position: absolute;
+    top: -32/@base;
+    height: 32/@base;
+    width: 100%;
+    background-image: url('../../../assets/static/imgs/bear/ceiling.png');
+    background-repeat: repeat-x;
+    -webkit-animation: animCeiling 481ms linear infinite;
+    animation: animCeiling 481ms linear infinite;
+ }
+ 
+ #land
+ {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-image: url('../../../assets/static/imgs/bear/land.png');
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-color: #ded895;
+    
+    -webkit-animation: animLand 2516ms linear infinite;
+    animation: animLand 2516ms linear infinite;
+ }
+ 
+ #bigscore
+ {
+    position: absolute;
+    top: 20/@base;
+    left: 150/@base;
+    z-index: 100;
+ }
+ 
+ #bigscore img
+ {
+    display: inline-block;
+    padding: 1/@base;
+ }
+ 
+ #splash
+ {
+    position: absolute;
+    top: 75/@base;
+    left: 65/@base;
+    width: 188/@base;
+    height: 170/@base;
+    background-image: url('../../../assets/static/imgs/bear/splash.png');
+    background-repeat: no-repeat;
+ }
+ 
+ #scoreboard
+ {
+    position: absolute;
+    display: none;
+    opacity: 1;
+    top: 64/@base;
+    left: 43/@base;
+    width: 236/@base;
+    height: 280/@base;
+    background-image: url('../../../assets/static/imgs/bear/scoreboard.png');
+    background-repeat: no-repeat;
+    
+    z-index: 1000;
+ }
+ 
+ #medal
+ {
+    position: absolute;
+    opacity: 0;
+    top: 114/@base;
+    left: 32/@base;
+    width: 44/@base;
+    height: 44/@base;
+ }
+ 
+ #currentscore
+ {
+    position: absolute;
+    top: 105/@base;
+    left: 107/@base;
+    width: 104/@base;
+    height: 14/@base;
+    text-align: right;
+ }
+ 
+ #currentscore img
+ {
+    padding-left: 2/@base;
+ }
+ 
+ #highscore
+ {
+    position: absolute;
+    top: 147/@base;
+    left: 107/@base;
+    width: 104/@base;
+    height: 14/@base;
+    text-align: right;
+ }
+ 
+ #highscore img
+ {
+    padding-left: 2/@base;
+ }
+ 
+ #replay
+ {
+    position: absolute;
+    opacity: 0;
+    top: 205/@base;
+    left: 61/@base;
+    height: 115/@base;
+    width: 70/@base;
+    cursor: pointer;
+ }
+ 
+ .boundingbox
+ {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 1px solid red;
+ }
+ 
+ #player
+ {
+    left: 60/@base;
+    top: 200/@base;
+ }
+ 
+ .bird
+ {
+    position: absolute;
+    width: 34/@base;
+    height: 24/@base;
+    background-image: url('../../../assets/static/imgs/bear/bird.png');
+    
+    -webkit-animation: animBird 300ms steps(4) infinite;
+    animation: animBird 300ms steps(4) infinite;
+ }
+ 
+ .pipe
+ {
+    position: absolute;
+    left: -100/@base;
+    width: 52/@base;
+    height: 100%;
+    z-index: 10;
+    
+    -webkit-animation: animPipe 7500ms linear;
+    animation: animPipe 7500ms linear;
+ }
+ 
+ .pipe_upper
+ {
+    position: absolute;
+    top: 0;
+    width: 52/@base;
+    background-image: url('../../../assets/static/imgs/bear/pipe.png');
+    background-repeat: repeat-y;
+    background-position: center;
+ }
+ 
+ .pipe_upper:after
+ {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 52/@base;
+    height: 26/@base;
+    background-image: url('../../../assets/static/imgs/bear/pipe-down.png');
+ }
+ 
+ .pipe_lower
+ {
+    position: absolute;
+    bottom: 0;
+    width: 52/@base;
+    background-image: url('../../../assets/static/imgs/bear/pipe.png');
+    background-repeat: repeat-y;
+    background-position: center;
+ }
+ 
+ .pipe_lower:after
+ {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52/@base;
+    height: 26/@base;
+    background-image: url('../../../assets/static/imgs/bear/pipe-up.png');
+ }
+ 
+ #footer
+ {
+    position: absolute;
+    bottom: 3/@base;
+    left: 3/@base;
+ }
+ 
+ #footer a,
+ #footer a:link,
+ #footer a:visited,
+ #footer a:hover,
+ #footer a:active
+ {
+    display: block;
+    padding: 2/@base;
+    text-decoration: none;
+    color: #fff;
+ }
+
+ /*动画特效*/
+
+  .fade-splash-enter-active {
+    transition: opacity 1s ease;
+  }
+
+  .fade-splash-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-splash-enter, .fade-splash-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+//   .fade-player-enter-active {
+//     transition: opacity 1s ease;
+//   }
+
+//   .fade-player-leave-active {
+//     transition: opacity 0.5s ease;
+//   }
+
+//   .fade-player-enter, .fade-player-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//     opacity: 0;
+//   }

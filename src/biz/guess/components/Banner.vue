@@ -9,7 +9,7 @@
     @import "~src/common/less/common.less";
     .banner {
         position: relative;
-        width: 16rem;
+        width: 750/@base;
         height: 200/@base;
         background: url('//h0.hucdn.com/open/201825/39bab27e549a5e7c_750x200.png') no-repeat;
         background-size: 100% 100%;

@@ -3,6 +3,7 @@ const koaRewrite = require('koa-rewrite');
 const koaResponseTime = require('koa-response-time');
 const KoaMount = require('koa-mount');
 const KoaStatic = require('koa-static');
+const cache = require('./cache');
 
 /**
  * 默认首页
@@ -87,20 +88,46 @@ let pageCache = (ctx, next) => {
  * @return {Promise.<void>}
  */
 let errorRedirect = async (ctx, next) => {
-    await next();
-    const status = ctx.response.status;
-
-    if (status === 500) {
-        ctx.status = 404;
-        ctx.state.path = 'error/404';
-        await ctx.render('error/404');
+    try {
+        await next();
+        const status = ctx.response.status;
+        if (status === 404) {
+            ctx.status = 404;
+            await ctx.render('error/404');
+        }
+    } catch(e) {
+        ctx.cache(false);
+        ctx.app.onerror(e);
+        ctx.status = 500;
+        await ctx.render('error/500');
     }
+};
 
-    if (status === 404) {
-        ctx.status = 404;
-        ctx.state.path = 'error/404';
-        await ctx.render('error/404');
+/**
+ * 登录态检查
+ *
+ * @public
+ * @param ctx
+ * @param next
+ * @return {Promise.<void>}
+ */
+let checkLogin = async (ctx, next,url) => {
+    debugger;
+    if(ctx.request.method !== 'POST' || ctx.url === '/addAccount' || ctx.url === '/loginAccount'){
+        return next();
     }
+    let tokenSessionId = ctx.cookies.get('sessionId');
+    let sessionId = await cache.get('sessionId');
+    let result = null;
+    if(!sessionId || !tokenSessionId || sessionId !== tokenSessionId){
+        ctx.body = {
+            success : false,
+            message : '登录态失效',
+            data : null,
+            statesCode : 505
+        };
+    }
+    return next();
 };
 
 module.exports = {
@@ -111,4 +138,5 @@ module.exports = {
     responseTime,
     htmlMinifier,
     staticMount,
+    checkLogin
 };

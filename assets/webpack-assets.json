@@ -22,5 +22,9 @@
   "cms": {
     "js": "/assets/static/cms-1a8d5740.js",
     "css": "/assets/static/cms-0d60ea71.css"
+  },
+  "bear": {
+    "js": "/assets/static/bear-ffffd45c.js",
+    "css": "/assets/static/bear-61a5cf08.css"
   }
 }
