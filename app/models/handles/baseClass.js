@@ -6,7 +6,7 @@ const MovieModel = require('../model/movieModel.js');
 
 class BaseClass {
     constructor() {
-        this.groupModel = GroupModel.instance();
+        // this.groupModel = GroupModel.instance();
         this.accountModel = AccountModel.instance();
         this.movieModel = MovieModel.instance();
         this.ctx = '';

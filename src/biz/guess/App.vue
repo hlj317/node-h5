@@ -61,7 +61,7 @@ import Banner from './components/Banner.vue';
 import RuleModel from './components/RuleModel.vue';
 import Main from './components/Main.vue';
 import History from './components/History.vue';
-import awardList from './components/awardList.vue';
+import awardList from './components/AwardList.vue';
 import InputModel from './components/InputModel.vue';
 import AlertModel from './components/AlertModel.vue';
 import Ad from './components/Ad.vue';
