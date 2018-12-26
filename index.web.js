@@ -15,6 +15,8 @@
     const server = new Server();
 
     const mysql = require('./app/models/common/mysql.js');
+
+    const port = process.env.NODE_ENV === 'dev' ? '8080' : '80';
     // const redis = require('./app/service/common/redis.js');
 
     mysql.init();
@@ -68,7 +70,7 @@
         router.all(urlPath, controller);
     }
 
-    await server.startup(router, 8080);
+    await server.startup(router, port);
 
     // POST请求都需要有登录态
     server.use(middleware.checkLogin); 

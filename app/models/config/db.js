@@ -25,7 +25,7 @@ const PRO = {
     movie_table_field: ["doubanId", "title", "rate", "poster", "type"]
 };
 
-if (process.env.NODE_ENV == 'dev') {
+if (process.env.NODE_ENV === 'dev') {
     dbConf = DEV;
 } else {
     dbConf = PRO;
