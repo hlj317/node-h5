@@ -15,7 +15,7 @@ module.exports = {
     },
     production: {
         redis: {
-            host: '10.81.81.26',
+            host: '127.0.0.1',
             port: 6379
         }
     }
