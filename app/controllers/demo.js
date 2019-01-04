@@ -1,20 +1,20 @@
 let hello = async function (ctx, next) {
-    await ctx.render('demo/hello', {
-        title: 'world',
-    });
+	await ctx.render("demo/hello", {
+		title: "world",
+	});
 
-    return next();
+	return next();
 };
 
 let hlj = async function (ctx, next) {
-    await ctx.render('demo/hlj', {
-        title: 'hello world',
-    });
+	await ctx.render("demo/hlj", {
+		title: "hello world",
+	});
 
-    return next();
+	return next();
 };
 
 module.exports = {
-    hello,
-    hlj
+	hello,
+	hlj
 };

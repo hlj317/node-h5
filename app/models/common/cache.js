@@ -1,137 +1,137 @@
-const Redis                                         = require('ioredis');
-const _                                             = require('underscore');
-const g                                             = require('../config/code.js');
-const LRU                                           = require('lru-cache');
+const Redis = require("ioredis");
+// const _ = require("underscore");
+// const g = require("../config/code.js");
+// const LRU = require("lru-cache");
 
 let client;
-let localData = {};
-let cacheLru = new LRU({
-    max: 1000,
-    maxAge: 1000 * 60 * 5,
-});
+// let localData = {};
+// let cacheLru = new LRU({
+// 	max: 1000,
+// 	maxAge: 1000 * 60 * 5,
+// });
 
-let xidLru = new LRU({
-    max: 2000000,
-    maxAge: 1000 * 3600 * 24,
-});
+// let xidLru = new LRU({
+// 	max: 2000000,
+// 	maxAge: 1000 * 3600 * 24,
+// });
 
 let set = async (key, value, expire = 600) => {
-    let res =  await client.set(key, String(value), 'EX', +expire);
-    return res;
+	let res =  await client.set(key, String(value), "EX", +expire);
+	return res;
 };
 
-let get = async (key, type = 'cache') =>
+let get = async (key, type = "cache") =>
+	await new Promise((resolve, reject) => {
+		console.log(type);
+		let val;
 
-    await new Promise((resolve, reject) => {
-        let val;
+		if (val) {
+			resolve(val);
+		} else {
+			client.get(key, (err, reply) => {
+				/* istanbul ignore else  */
 
-        if (val) {
-            resolve(val);
-        } else {
-            client.get(key, (err, reply) => {
-                /* istanbul ignore else  */
-
-                if (!err) {
-                    // lru.set(key, reply);
-                    resolve(reply);
-                } else {
-                    reject(err);
-                }
-            });
-        }
-    });
+				if (!err) {
+					// lru.set(key, reply);
+					resolve(reply);
+				} else {
+					reject(err);
+				}
+			});
+		}
+	});
 
 let del = async (key) => {
-    client.del(key);
+	client.del(key);
 };
 
 let init = async (redisConf, isWeb) => {
-    if (client) {
-        return false;
-    }
+	if (client) {
+		return false;
+	}
 
-    if (!redisConf) {
-        throw new RedisConfigError(redisConf);
-    }
+	if (!redisConf) {
+		// throw new RedisConfigError(redisConf);
+	}
 
-    if (redisConf.length > 1) {
-        client = new Redis.Cluster(redisConf);
-    } else {
-        client = new Redis(redisConf[0]);
-    }
+	if (redisConf.length > 1) {
+		client = new Redis.Cluster(redisConf);
+	} else {
+		client = new Redis(redisConf[0]);
+	}
 
-    client.on('error', (err) => console.log(err));
+	client.on("error", (err) => console.log(err));
 
-    client.on('end', () => console.log('Redis connect end'));
+	client.on("end", () => console.log("Redis connect end"));
 
-    await new Promise((resolve, reject) => {
-        client.on('ready', (err) => {
-            if (err) {
-                console.log(err);
+	await new Promise((resolve, reject) => {
+		client.on("ready", (err) => {
+			if (err) {
+				console.log(err);
 
-                reject(err);
-            } else {
-                console.log('Redis connected');
-                resolve(true);
-            }
-        });
-    });
+				reject(err);
+			} else {
+				console.log("Redis connected");
+				resolve(true);
+			}
+		});
+	});
 
-    if (isWeb) {
-        await hotLoad();
-    }
+	if (isWeb) {
+		await hotLoad();
+	}
 
-    for (let val of process.argv) {
-        if (val === 'web') {
-            await hotLoad();
+	for (let val of process.argv) {
+		if (val === "web") {
+			await hotLoad();
 
-            break;
-        }
-    }
+			break;
+		}
+	}
 };
 
-let loadOneKey = async (key) => {
-    await new Promise((resolve) => {
-        client.get(key, (err, reply) => {
-            xidLru.set(key, reply);
-            resolve();
-        });
-    });
-};
+// let loadOneKey = async (key) => {
+// 	await new Promise((resolve) => {
+// 		client.get(key, (err, reply) => {
+// 			xidLru.set(key, reply);
+// 			resolve();
+// 		});
+// 	});
+// };
 
 let hotLoad = async () => {
-    return;
+	return;
 
-    let loadKeys = null;
-    let time = +new Date();
-    let index = 0;
+	// let loadKeys = null;
+	// let time = +new Date();
+	// let index = 0;
 
-    await new Promise((resolve) => {
-        client.keys('ux*', (err, reply) => {
-            console.log(`hot load key: ux*, count: 0 / ${reply.length}`);
-            loadKeys = reply;
-            resolve();
-        });
-    });
+	// await new Promise((resolve) => {
+	// 	client.keys("ux*", (err, reply) => {
+	// 		console.log(`hot load key: ux*, count: 0 / ${reply.length}`);
+	// 		loadKeys = reply;
+	// 		resolve();
+	// 	});
+	// });
 
-    for (let key of loadKeys) {
-        await loadOneKey(key);
+	// for (let key of loadKeys) {
+	// 	await loadOneKey(key);
 
-        index++;
+	// 	index++;
 
-        if (+new Date() - time > 1000) {
-            time = +new Date();
-            console.log(`hot load key: ux*, count: ${index} / ${loadKeys.length}`);
-        }
-    }
+	// 	if (+new Date() - time > 1000) {
+	// 		time = +new Date();
+	// 		console.log(`hot load key: ux*, count: ${index} / ${loadKeys.length}`);
+	// 	}
+	// }
 };
 
 let getClient = () => client;
 
 module.exports = {
-    set,
-    get,
-    del,
-    init,
-    getClient,
+	set,
+	get,
+	del,
+	init,
+	getClient,
 };

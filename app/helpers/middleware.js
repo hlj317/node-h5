@@ -1,23 +1,23 @@
-const HtmlMinifier = require('koa-html-minifier');
-const koaRewrite = require('koa-rewrite');
-const koaResponseTime = require('koa-response-time');
-const KoaMount = require('koa-mount');
-const KoaStatic = require('koa-static');
-const cache = require('./cache');
+const HtmlMinifier = require("koa-html-minifier");
+const koaRewrite = require("koa-rewrite");
+const koaResponseTime = require("koa-response-time");
+const KoaMount = require("koa-mount");
+const KoaStatic = require("koa-static");
+const cache = require("./cache");
 
 /**
  * 默认首页
  *
  * @return {Function}
  */
-let indexRewrite = () => koaRewrite(/^\/?$/, '/index.html');
+let indexRewrite = () => koaRewrite(/^\/?$/, "/index.html");
 
 /**
  * 内部重定向,代替原先nginx重定向
  *
  * @return {Function}
  */
-let internalRewrite = () => koaRewrite(/^(\/[\w/]+)\.html(.*)/, '$1$2');
+let internalRewrite = () => koaRewrite(/^(\/[\w/]+)\.html(.*)/, "$1$2");
 
 /**
  * HTML文件压缩
@@ -26,8 +26,8 @@ let internalRewrite = () => koaRewrite(/^(\/[\w/]+)\.html(.*)/, '$1$2');
  * @return {HtmlMinifier}
  */
 let htmlMinifier = () => HtmlMinifier({
-    collapseWhitespace: true,
-    removeComments: false,
+	collapseWhitespace: true,
+	removeComments: false,
 });
 
 /**
@@ -45,11 +45,11 @@ let responseTime = () => koaResponseTime();
  * @return {Function}
  */
 let staticMount = () => {
-    const mount = KoaMount('/assets/', KoaStatic(`./assets`, {
-        maxage: 300000,
-    }));
+	const mount = KoaMount("/assets/", KoaStatic("./assets", {
+		maxage: 300000,
+	}));
 
-    return mount;
+	return mount;
 };
 
 /**
@@ -61,21 +61,21 @@ let staticMount = () => {
  * @throws {Error}
  */
 let pageCache = (ctx, next) => {
-    ctx.cache = (maxAge) => {
-        if (maxAge === false) {
-            ctx.set('Cache-Control', 'private, no-cache, no-store');
-            return;
-        }
+	ctx.cache = (maxAge) => {
+		if (maxAge === false) {
+			ctx.set("Cache-Control", "private, no-cache, no-store");
+			return;
+		}
 
-        if (typeof maxAge === 'number') {
-            maxAge = Math.round(maxAge);
-            ctx.set('Cache-Control', `max-age=30,s-maxage=${maxAge}`);
-        } else {
-            throw new Error(`invalid cache control value: ${maxAge}`);
-        }
-    };
+		if (typeof maxAge === "number") {
+			maxAge = Math.round(maxAge);
+			ctx.set("Cache-Control", `max-age=30,s-maxage=${maxAge}`);
+		} else {
+			throw new Error(`invalid cache control value: ${maxAge}`);
+		}
+	};
 
-    return next();
+	return next();
 };
 
 /**
@@ -88,19 +88,19 @@ let pageCache = (ctx, next) => {
  * @return {Promise.<void>}
  */
 let errorRedirect = async (ctx, next) => {
-    try {
-        await next();
-        const status = ctx.response.status;
-        if (status === 404) {
-            ctx.status = 404;
-            await ctx.render('error/404');
-        }
-    } catch(e) {
-        ctx.cache(false);
-        ctx.app.onerror(e);
-        ctx.status = 500;
-        await ctx.render('error/500');
-    }
+	try {
+		await next();
+		const status = ctx.response.status;
+		if (status === 404) {
+			ctx.status = 404;
+			await ctx.render("error/404");
+		}
+	} catch(e) {
+		ctx.cache(false);
+		ctx.app.onerror(e);
+		ctx.status = 500;
+		await ctx.render("error/500");
+	}
 };
 
 /**
@@ -112,31 +112,30 @@ let errorRedirect = async (ctx, next) => {
  * @return {Promise.<void>}
  */
 let checkLogin = async (ctx, next,url) => {
-    debugger;
-    if(ctx.request.method !== 'POST' || ctx.url === '/addAccount' || ctx.url === '/loginAccount'){
-        return next();
-    }
-    let tokenSessionId = ctx.cookies.get('sessionId');
-    let sessionId = await cache.get('sessionId');
-    let result = null;
-    if(!sessionId || !tokenSessionId || sessionId !== tokenSessionId){
-        ctx.body = {
-            success : false,
-            message : '登录态失效',
-            data : null,
-            statesCode : 505
-        };
-    }
-    return next();
+	console.log(url);
+	if(ctx.request.method !== "POST" || ctx.url === "/addAccount" || ctx.url === "/loginAccount"){
+		return next();
+	}
+	let tokenSessionId = ctx.cookies.get("sessionId");
+	let sessionId = await cache.get("sessionId");
+	if(!sessionId || !tokenSessionId || sessionId !== tokenSessionId){
+		ctx.body = {
+			success : false,
+			message : "登录态失效",
+			data : null,
+			statesCode : 505
+		};
+	}
+	return next();
 };
 
 module.exports = {
-    indexRewrite,
-    internalRewrite,
-    pageCache,
-    errorRedirect,
-    responseTime,
-    htmlMinifier,
-    staticMount,
-    checkLogin
+	indexRewrite,
+	internalRewrite,
+	pageCache,
+	errorRedirect,
+	responseTime,
+	htmlMinifier,
+	staticMount,
+	checkLogin
 };
