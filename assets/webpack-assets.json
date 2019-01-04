@@ -1,54 +1,54 @@
 {
+  "": {
+    "json": "/manifest.json",
+    "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
+  },
   "bear": {
-    "js": "/assets/static/bear-dcff003f.js",
-    "css": "/assets/static/bear-93bc7659.css"
+    "js": "/assets/static/bear-2506f867.js",
+    "css": "/assets/static/bear-417fc687.css"
+  },
+  "demo/hello": {
+    "js": "/assets/static/demo/hello-1b8daa66.js",
+    "css": "/assets/static/demo/hello-417fc687.css"
+  },
+  "demo/hlj": {
+    "js": "/assets/static/demo/hlj-eeb2f5f4.js",
+    "css": "/assets/static/demo/hlj-417fc687.css"
+  },
+  "guess": {
+    "js": "/assets/static/guess-e2283050.js",
+    "css": "/assets/static/guess-417fc687.css"
+  },
+  "cms": {
+    "js": "/assets/static/cms-4d444761.js",
+    "css": "/assets/static/cms-417fc687.css"
   },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
   },
-  "demo/hello": {
-    "js": "/assets/static/demo/hello-5226536e.js",
-    "css": "/assets/static/demo/hello-93bc7659.css"
-  },
-  "demo/hlj": {
-    "js": "/assets/static/demo/hlj-80883714.js",
-    "css": "/assets/static/demo/hlj-93bc7659.css"
-  },
-  "guess": {
-    "js": "/assets/static/guess-93c75e4a.js",
-    "css": "/assets/static/guess-93bc7659.css"
-  },
-  "cms": {
-    "js": "/assets/static/cms-c6bce7e9.js",
-    "css": "/assets/static/cms-93bc7659.css"
-  },
-  "": {
-    "json": "/manifest.json",
-    "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
-  },
   "register": {
-    "js": "/assets/static/register-9c9ab435.js",
-    "css": "/assets/static/register-93bc7659.css"
+    "js": "/assets/static/register-d2b017ab.js",
+    "css": "/assets/static/register-417fc687.css"
   },
   "movie": {
-    "js": "/assets/static/movie-c7b5ef3d.js",
-    "css": "/assets/static/movie-93bc7659.css"
+    "js": "/assets/static/movie-365a4645.js",
+    "css": "/assets/static/movie-417fc687.css"
   },
   "login": {
-    "js": "/assets/static/login-dd4db1b3.js",
-    "css": "/assets/static/login-93bc7659.css"
+    "js": "/assets/static/login-2202dfe5.js",
+    "css": "/assets/static/login-417fc687.css"
   },
   "error/404": {
-    "js": "/assets/static/error/404-2ec1ed2c.js",
-    "css": "/assets/static/error/404-93bc7659.css"
+    "js": "/assets/static/error/404-66120d05.js",
+    "css": "/assets/static/error/404-417fc687.css"
   },
   "detail": {
-    "js": "/assets/static/detail-c23dd6ed.js",
-    "css": "/assets/static/detail-93bc7659.css"
+    "js": "/assets/static/detail-481281ac.js",
+    "css": "/assets/static/detail-417fc687.css"
   },
   "ai": {
-    "js": "/assets/static/ai-de24700a.js",
-    "css": "/assets/static/ai-93bc7659.css"
+    "js": "/assets/static/ai-817ce1d0.js",
+    "css": "/assets/static/ai-417fc687.css"
   }
 }
