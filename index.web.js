@@ -35,6 +35,8 @@
 	server.use(middleware.indexRewrite());
 	// 添加内部重定向
 	server.use(middleware.internalRewrite());
+	// 添加首页重定向
+	server.use(middleware.homeRewrite);
 	// HTML文件压缩
 	server.use(middleware.htmlMinifier());
 
@@ -73,6 +75,6 @@
 	await server.startup(router, port);
 
 	// POST请求都需要有登录态
-	// server.use(middleware.checkLogin); 
+	server.use(middleware.checkLogin); 
 
 })();

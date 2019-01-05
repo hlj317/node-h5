@@ -98,7 +98,8 @@ export default {
         }
     },
     created() {
-        this.init(resData.data);  
+        debugger;
+        // this.init(resData.data);  
     },
     methods:{
         init(data) {

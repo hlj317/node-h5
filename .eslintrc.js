@@ -29,6 +29,12 @@ module.exports = {
         ],
         "no-console":[
             "off"
+        ],
+        "no-debugger":[
+            "off"
+        ],
+        "no-useless-escape":[
+            "off"
         ]
     }
 };

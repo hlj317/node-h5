@@ -4,7 +4,7 @@
     ],
     "plugins": [
         "component",
-        "lodash",
+        // "lodash",   //不知道为什么开启这个插件就报错了，问问别人看
         "transform-es2015-modules-commonjs",
         "transform-runtime"
     ],

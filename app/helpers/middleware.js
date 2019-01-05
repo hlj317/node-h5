@@ -129,6 +129,22 @@ let checkLogin = async (ctx, next,url) => {
 	return next();
 };
 
+/**
+ * 首页重定向到电影首页
+ *
+ * @public
+ * @param ctx
+ * @param next
+ * @return {Promise.<void>}
+ */
+
+let homeRewrite = async (ctx,next) => {
+	if(ctx.request.url === "/" || ctx.request.url === "/index"){
+		ctx.response.redirect("/movie");
+	}
+	return next();
+};
+
 module.exports = {
 	indexRewrite,
 	internalRewrite,
@@ -137,5 +153,6 @@ module.exports = {
 	responseTime,
 	htmlMinifier,
 	staticMount,
-	checkLogin
+	checkLogin,
+	homeRewrite
 };
