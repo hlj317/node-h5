@@ -1,11 +1,11 @@
 {
+  "bear": {
+    "js": "/assets/static/bear-2506f867.js",
+    "css": "/assets/static/bear-417fc687.css"
+  },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
-  },
-  "": {
-    "json": "/manifest.json",
-    "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-1b8daa66.js",
@@ -23,17 +23,17 @@
     "js": "/assets/static/cms-4d444761.js",
     "css": "/assets/static/cms-417fc687.css"
   },
-  "bear": {
-    "js": "/assets/static/bear-2506f867.js",
-    "css": "/assets/static/bear-417fc687.css"
+  "": {
+    "json": "/manifest.json",
+    "ttf": "/6f0a76321d30f3c8120915e57f7bd77e.ttf"
   },
   "register": {
     "js": "/assets/static/register-d2b017ab.js",
     "css": "/assets/static/register-417fc687.css"
   },
   "movie": {
-    "js": "/assets/static/movie-3c224e7e.js",
-    "css": "/assets/static/movie-3efba6dd.css"
+    "js": "/assets/static/movie-63e8ef1e.js",
+    "css": "/assets/static/movie-daabded3.css"
   },
   "login": {
     "js": "/assets/static/login-2202dfe5.js",

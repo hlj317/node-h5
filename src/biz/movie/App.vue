@@ -26,7 +26,7 @@
     </div>
 </template>
 
-<style scoped lang="less">
+<style lang="less">
     @import "~src/common/less/common.less";
     html,body{
         width: 100%;
