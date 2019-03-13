@@ -72,6 +72,9 @@
 		router.all(urlPath, controller);
 	}
 
+	// 开启https服务
+	await server.ssl("./ssl/1920402_www.xiaohuangren.top.key", "./ssl/1920402_www.xiaohuangren.top.pem");
+
 	await server.startup(router, port);
 
 	// POST请求都需要有登录态
