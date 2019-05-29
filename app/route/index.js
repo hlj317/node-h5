@@ -71,5 +71,5 @@ module.exports = {
 	// "/updateFightProperty":fight.updateFightProperty,
 
 	//活动系统
-	"/activsystem/test":activsystem.test,
+	"/activsystem/test":activsystem.testGetList,
 };
