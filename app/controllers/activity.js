@@ -12,7 +12,23 @@ const bear = async function (ctx, next) {
 	return next();
 };
 
+const phptest = async function (ctx, next) {
+	await ctx.render("activity/phptest", {
+		title: "实现php增删改查",
+	});
+	return next();
+};
+
+const imgtest = async function (ctx, next) {
+	await ctx.render("activity/imgtest", {
+		title: "图片上传测试页面",
+	});
+	return next();
+};
+
 module.exports = {
 	guess,
-	bear
+	bear,
+	phptest,
+	imgtest
 };

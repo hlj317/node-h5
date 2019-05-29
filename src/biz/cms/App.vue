@@ -1,27 +1,7 @@
 <template>
   <el-container id="app" class="el-container">
     <aside-component></aside-component>
-    <el-container>
-      <el-header>
-        <headerComponent 
-          :navSwitch="navSwitchFun"
-          :items="myData"
-          :isSelected="isSelected"
-          >
-        </headerComponent>
-      </el-header>
-      
-      <el-main>
-
-        <main-component
-          :items="myData"
-          :isShow="isShow"
-        ></main-component>
-        
-      </el-main>
-
-    </el-container>
-    
+    <router-view class="view"></router-view> 
   </el-container>
 
 </template>
@@ -29,7 +9,6 @@
 <script>
 import asideComponent from './components/aside-component.vue'
 import headerComponent from './components/header-component.vue'
-import mainComponent from './components/main-component.vue'
 export default {
     data() {
       return {
@@ -81,8 +60,7 @@ export default {
     },
     components: {
       asideComponent,
-      headerComponent,
-      mainComponent
+      headerComponent
     }
 }
 </script>
@@ -96,13 +74,6 @@ export default {
   .el-aside{
      width:200px;
      background:#ffffff;
-  }
-  .el-header {
-    background-color: #B3C0D1;
-    color: #666666;
-    line-height: 60px;
-    text-align: right; 
-    font-size: 12px;
   }
 
  .el-row {

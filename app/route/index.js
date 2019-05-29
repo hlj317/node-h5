@@ -1,7 +1,7 @@
 const demo = require("../../app/controllers/demo");
 const activity = require("../../app/controllers/activity");
 const movie = require("../../app/controllers/movie");
-// const fight = require("../../app/controllers/fight");
+const fight = require("../../app/controllers/fight");
 const cms = require("../../app/controllers/cms");
 const activsystem = require("../../app/controllers/activsystem");
 
@@ -11,11 +11,11 @@ const guessApi = require("../../app/controllers/api");
 module.exports = {
 	// <demo> hello world
 	"/demo/hello": demo.hello,
-	// "/guess": activity.guess,
-	// "/bear": activity.bear,
+	"/guess": activity.guess,
+	"/bear": activity.bear,
 	"/phptest": activity.phptest,
-	// "/imgtest": activity.imgtest,
-	// "/": activity.phptest,
+	"/imgtest": activity.imgtest,
+	"/": activity.phptest,
 	"/cms": cms.index,
 
 	//电影网站
@@ -53,22 +53,22 @@ module.exports = {
 	"/ai":movie.ai,
 
 	//PK大乱斗页面和API
-	// "/fight":fight.index,
-	// "/getFightUserList":fight.getFightUserList,
-	// "/addFightUser":fight.addFightUser,
-	// "/delFightUser":fight.delFightUser,
-	// "/getFightUserOne":fight.getFightUserOne,
-	// "/updateFightUser":fight.updateFightUser,
-	// "/getFightDetailList":fight.getFightDetailList,
-	// "/addFightDetail":fight.addFightDetail,
-	// "/delFightDetail":fight.delFightDetail,
-	// "/getFightDetailOne":fight.getFightDetailOne,
-	// "/updateFightDetail":fight.updateFightDetail,
-	// "/getFightPropertyList":fight.getFightPropertyList,
-	// "/addFightProperty":fight.addFightProperty,
-	// "/delFightProperty":fight.delFightProperty,
-	// "/getFightPropertyOne":fight.getFightPropertyOne,
-	// "/updateFightProperty":fight.updateFightProperty,
+	"/fight":fight.index,
+	"/getFightUserList":fight.getFightUserList,
+	"/addFightUser":fight.addFightUser,
+	"/delFightUser":fight.delFightUser,
+	"/getFightUserOne":fight.getFightUserOne,
+	"/updateFightUser":fight.updateFightUser,
+	"/getFightDetailList":fight.getFightDetailList,
+	"/addFightDetail":fight.addFightDetail,
+	"/delFightDetail":fight.delFightDetail,
+	"/getFightDetailOne":fight.getFightDetailOne,
+	"/updateFightDetail":fight.updateFightDetail,
+	"/getFightPropertyList":fight.getFightPropertyList,
+	"/addFightProperty":fight.addFightProperty,
+	"/delFightProperty":fight.delFightProperty,
+	"/getFightPropertyOne":fight.getFightPropertyOne,
+	"/updateFightProperty":fight.updateFightProperty,
 
 	//活动系统
 	"/activsystem/test":activsystem.testGetList

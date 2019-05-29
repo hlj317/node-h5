@@ -26,6 +26,8 @@ class testGetListHandler extends BaseClass {
 	}
 
 	async handler(ctx, next) {
+		this.ctx = ctx;
+		this.next = next;
 		const openid = ctx.request.body.openid;
 		const score = Math.floor(Math.random()*10+1);
 		const data = {

@@ -1,0 +1,320 @@
+/*
+    1px border problem
+    inspired by http://alloyteam.github.io/JMUI/css/jmui.css
+    added by Xaber
+ */
+a {
+  color: inherit;
+}
+.flex-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex-center.align-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.flex-center.align-bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.b-lazy-ani {
+  -webkit-transition: opacity 300ms ease-in-out;
+  -moz-transition: opacity 300ms ease-in-out;
+  -o-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+.b-lazy-ani.b-loaded {
+  opacity: 1;
+}
+.fall-img-container {
+  width: 8rem;
+  height: 8rem;
+  background: url('//h0.hucdn.com/open/201639/ed37893cc0d2680e_375x375.png');
+  background-size: 100% 100%;
+}
+.mr6 {
+  margin-right: 0.128rem;
+}
+.mb12 {
+  margin-bottom: 0.256rem;
+}
+.mb16 {
+  margin-bottom: 0.34133333rem;
+}
+.mb20 {
+  margin-bottom: 0.42666667rem;
+}
+.mb24 {
+  margin-bottom: 0.512rem;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  font-size: .6rem;
+}
+html {
+  color: #000;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html * {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: PingFang-SC-Regular, HeitiJ-Light, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+input:-ms-clear {
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,
+q:after {
+  content: '';
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+a:active {
+  text-decoration: none;
+}
+ins,
+a {
+  text-decoration: none;
+}
+fieldset,
+img,
+button,
+input {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+:focus {
+  outline: 0;
+}
+body {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1474372158_1245542.eot');
+  /* IE9*/
+  src: url('//at.alicdn.com/t/font_1474372158_1245542.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1474372158_1245542.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1474372158_1245542.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1474372158_1245542.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes btn-bounce {
+  0% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(1.03);
+  }
+  90% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  background: #ffffff;
+}
+*,
+*:before,
+*:after {
+  /* border box */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* gpu acceleration */
+  -webkit-transition: translate3d(0, 0, 0);
+  /* select disable */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#gamecontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 28.45866667rem;
+}
+/*
+ Screen - Game
+ */
+#gamescreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#sky {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  background-image: url('../../../assets/static/imgs/bear/sky.png');
+  background-repeat: repeat-x;
+  background-position: 0px 100%;
+  background-color: #4ec0ca;
+  -webkit-animation: animSky 7s linear infinite;
+  animation: animSky 7s linear infinite;
+}
+#flyarea {
+  position: absolute;
+  bottom: 0;
+  height: 17.92rem;
+  width: 100%;
+}

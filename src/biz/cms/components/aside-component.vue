@@ -4,7 +4,7 @@
         <el-menu :default-openeds="['1']" :default-active="1-1" unique-opened=true >
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>Basic2</template>
-              <el-menu-item :index="1-1">Layout布局</el-menu-item>
+              <el-menu-item :index="1-1"><router-link to="/cms">Layout布局</router-link></el-menu-item>
               <el-menu-item index="1-2">Container布局容器</el-menu-item>
               <el-menu-item index="1-3">Icon图标</el-menu-item>
               <el-menu-item index="1-4">Button按钮</el-menu-item>
@@ -44,6 +44,12 @@
               <el-menu-item index="6-3">Card卡片</el-menu-item>
               <el-menu-item index="6-4">Carousel走马灯</el-menu-item>
               <el-menu-item index="6-5">Collapse折叠面板</el-menu-item>
+          </el-submenu>
+          <el-submenu index="7">
+            <template slot="title"><i class="el-icon-view"></i>设计模式</template>
+              <el-menu-item index="7-1"><router-link to="/cms/single">单例模式</router-link></el-menu-item>
+              <el-menu-item index="7-2"><router-link to="/cms/strategy">策略模式</router-link></el-menu-item>
+              <el-menu-item index="7-3"><router-link to="/cms/proxy">代理模式</router-link></el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
