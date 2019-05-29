@@ -1,9 +1,9 @@
 const demo = require("../../app/controllers/demo");
-const activity = require("../../app/controllers/activity");
+// const activity = require("../../app/controllers/activity");
 const movie = require("../../app/controllers/movie");
 // const fight = require("../../app/controllers/fight");
 const cms = require("../../app/controllers/cms");
-const activsystem = require("../../app/controllers/activsystem");
+// const activsystem = require("../../app/controllers/activsystem");
 
 //猜价格业务api
 const guessApi = require("../../app/controllers/api");
@@ -11,11 +11,11 @@ const guessApi = require("../../app/controllers/api");
 module.exports = {
 	// <demo> hello world
 	"/demo/hello": demo.hello,
-	"/guess": activity.guess,
-	"/bear": activity.bear,
-	"/phptest": activity.phptest,
-	"/imgtest": activity.imgtest,
-	"/": activity.phptest,
+	// "/guess": activity.guess,
+	// "/bear": activity.bear,
+	// "/phptest": activity.phptest,
+	// "/imgtest": activity.imgtest,
+	// "/": activity.phptest,
 	"/cms": cms.index,
 
 	//电影网站
@@ -71,5 +71,5 @@ module.exports = {
 	// "/updateFightProperty":fight.updateFightProperty,
 
 	//活动系统
-	"/activsystem/test":activsystem.testGetList
+	// "/activsystem/test":activsystem.testGetList
 };
