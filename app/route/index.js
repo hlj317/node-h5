@@ -1,7 +1,7 @@
 const demo = require("../../app/controllers/demo");
 const activity = require("../../app/controllers/activity");
 const movie = require("../../app/controllers/movie");
-const fight = require("../../app/controllers/fight");
+// const fight = require("../../app/controllers/fight");
 const cms = require("../../app/controllers/cms");
 const activsystem = require("../../app/controllers/activsystem");
 
