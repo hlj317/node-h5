@@ -1,46 +1,8 @@
 <template>
     <div id="guess" class="guess-page">
+        <div>
         <img src='http://image.xiaohuangren.top/assets/static/imgs/pk/cover.jpg' />
-        <Banner :showrule="showRuleModel"></Banner>
-        <Main :count="countNum"
-            :end="rspData.end"
-            :guessNow="guessNow"
-            :award="rspData.award"
-            :isaward="rspData.isAward"
-            :minPrice="rspData.minPrice"
-            :maxPrice="rspData.maxPrice"
-            >
-        </Main>
-         <History
-            :history="rspData.guessHistory"
-            >
-        </History>
-        <award-list :items="rspData.toastList"></award-list>
-        <InputModel v-if="showInput" 
-            :tips="inputModelTip"
-            :inputing="inputing"
-            :onsubmit="submitPrice"
-            :onclose="closeInputModel">
-        </InputModel>
-        <AlertModel v-if="showAlert" 
-            :tips="alertTips"
-            :btntext="alertModelBtnText"
-            :onsubmit="handleAlertBtn"
-            :onclose="closeAlertModel">
-        </AlertModel>
-        <RuleModel v-if="showRule"
-            :onclose="closeRuleModel"
-            >
-        </RuleModel>
-        <RuleModel v-if="showRule"
-            :onclose="closeRuleModel"
-            >
-        </RuleModel>
-        <div class="to-link-img" @click="goOutLink">
-            <img src="//h0.hucdn.com/open/201825/a62b3cf61dc10af2_750x200.png" alt="">
         </div>
-        <Ad :items="adData"></Ad>
-
     </div>
 </template>
 
