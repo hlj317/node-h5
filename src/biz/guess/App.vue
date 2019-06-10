@@ -1,5 +1,8 @@
 <template>
     <div id="guess" class="guess-page">
+        <div style ='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+            <img src='http://image.xiaohuangren.top/assets/static/imgs/pk/cover.jpg' />
+        </div>
         <Banner :showrule="showRuleModel"></Banner>
         <Main :count="countNum"
             :end="rspData.end"
