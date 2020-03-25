@@ -57,7 +57,7 @@
     "koa-xtpl": "^2.1.1",
     "less-loader": "^4.1.0",
     "lodash-webpack-plugin": "0.11.2",
-    "minimist": "1.2.0",
+    "minimist": "1.2.5",
     "mocha": "^5.2.0",
     "mysql": "^2.16.0",
     "nightmare": "^3.0.1",
