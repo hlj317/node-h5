@@ -15,7 +15,7 @@
                 <ul class="movie-list" :key="key" v-show="key === isTabSelected">
                     <li v-for="(item,index) in items" :key="index">
                         <a :href="item.gotoLink">
-                            <span class="pic"><img :src="item.poster" /></span>
+                            <span class="pic"><img :src="item.poster" referrerPolicy="no-referrer" /></span>
                             <span class="title">{{item.title}}</span>
                             <span class="rate">{{item.rate}}</span>
                         </a>
