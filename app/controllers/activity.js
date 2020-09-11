@@ -19,6 +19,13 @@ const phptest = async function (ctx, next) {
 	return next();
 };
 
+const javatest = async function (ctx, next) {
+	await ctx.render("activity/javatest", {
+		title: "实现java增删改查",
+	});
+	return next();
+};
+
 const imgtest = async function (ctx, next) {
 	await ctx.render("activity/imgtest", {
 		title: "图片上传测试页面",
@@ -30,5 +37,6 @@ module.exports = {
 	guess,
 	bear,
 	phptest,
-	imgtest
+	imgtest,
+	javatest
 };

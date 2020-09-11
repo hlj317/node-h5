@@ -16,6 +16,13 @@ const getData = (options) => {
 		timeout: options.timeout || REQ_TIMEOUT,
 		gzip: true,
 	};
+	if(options.method === "POST"){
+		params.json = true;
+		params.headers = {
+			"content-type": "application/json"
+		};
+		params.body = options.data;
+	}
 	if (options.cookie) {
 		params.headers = {
 			Cookie: options.cookie,

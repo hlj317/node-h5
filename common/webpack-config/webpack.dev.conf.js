@@ -1,7 +1,7 @@
 let webpack = require("webpack");
 let VConsolePlugin = require("vconsole-webpack-plugin");
 
-const PORT = 8000;
+const PORT = 8001;
 let devConfig = () => {
 	let config = {
 		// eval-source-map is faster for development

@@ -33,6 +33,7 @@ class loginHandler extends BaseClass {
 	}
 
 	async handler(ctx, next) {
+
 		this.ctx = ctx;
 		this.next = next;
 		let sessionId = "",

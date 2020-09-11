@@ -3,6 +3,7 @@ const activity = require("../../app/controllers/activity");
 const movie = require("../../app/controllers/movie");
 const fight = require("../../app/controllers/fight");
 const cms = require("../../app/controllers/cms");
+const es6 = require("../controllers/es6");
 const activsystem = require("../../app/controllers/activsystem");
 
 //猜价格业务api
@@ -12,11 +13,13 @@ module.exports = {
 	// <demo> hello world
 	"/demo/hello": demo.hello,
 	"/guess": activity.guess,
-	"/bear": activity.bear,
+	"/bear": activity.bear, 
 	"/phptest": activity.phptest,
+	"/javatest": activity.javatest,
 	"/imgtest": activity.imgtest,
 	"/": activity.phptest,
 	"/cms": cms.index,
+	"/es6": es6.index,
 
 	//电影网站
 	"/movie":movie.index,
@@ -71,5 +74,14 @@ module.exports = {
 	"/updateFightProperty":fight.updateFightProperty,
 
 	//活动系统
-	"/activsystem/test":activsystem.testGetList
+	"/activsystem/test":activsystem.testGetList,
+
+	//java接口
+	"/getScore":movie.getScore,
+	"/addScore":movie.addScore,
+	"/updateScore":movie.updateScore,
+
+	//练习sql语句
+	"/exercise/sql":movie.exerciseSql
+
 };

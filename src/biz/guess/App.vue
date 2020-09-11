@@ -36,7 +36,7 @@
             >
         </RuleModel>
         <div class="to-link-img" @click="goOutLink">
-            <img src="//h0.hucdn.com/open/201825/a62b3cf61dc10af2_750x200.png" alt="">
+            <img src="//h0.beicdn.com/open/201825/a62b3cf61dc10af2_750x200.png" alt="">
         </div>
         <Ad :items="adData"></Ad>
 
@@ -68,7 +68,7 @@ import Ad from './components/Ad.vue';
 import axios from 'axios';
 import {resData,proData} from './mock/guessData.js';
 import {isSupportCopy, getFormatDate, getFormatPrice} from '../common/js/utils.js';
-const productImg = 'http://h0.hucdn.com/open/201825/d408f7cdf30594ed_405x416.png';
+const productImg = 'http://h0.beicdn.com/open/201825/d408f7cdf30594ed_405x416.png';
 
 export default {
     data() {
@@ -98,7 +98,6 @@ export default {
         }
     },
     created() {
-        debugger;
         // this.init(resData.data);  
     },
     methods:{

@@ -34,3 +34,6 @@ yarn*
 
 # vagrant file
 v8-compile-cache-0
+
+# 忽略编译后的静态文件
+/assets/

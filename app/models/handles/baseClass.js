@@ -3,12 +3,14 @@
 // const GroupModel = require("../model/groupsModel.js");
 const AccountModel = require("../model/accountModel.js");
 const MovieModel = require("../model/movieModel.js");
+const SqlModel = require("../model/sqlModel.js");
 
 class BaseClass {
 	constructor() {
 		// this.groupModel = GroupModel.instance();
 		this.accountModel = AccountModel.instance();
 		this.movieModel = MovieModel.instance();
+		this.sqlModel = SqlModel.instance();
 		this.ctx = "";
 	}
 

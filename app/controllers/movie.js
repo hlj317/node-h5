@@ -3,12 +3,14 @@ const request = require("../helpers/request");
 // const middleware = require("../helpers/middleware");
 const addItemHandler = require("../models/handles/addItemHandler.js");
 const getItemHandler = require("../models/handles/getItemHandler.js");
+// const getTableHandler = require("../models/handles/getTableHandler.js");
 const delItemHandler = require("../models/handles/delItemHandler.js");
 const updateItemHandler = require("../models/handles/updateItemHandler.js");
 const loginHandler = require("../models/handles/loginHandler.js");
 const addAccountHandler = require("../models/handles/addAccountHandler.js");
 const movieListHandler = require("../models/handles/getMovieListHandler.js");
 const movieItemOneHandler = require("../models/handles/getMovieOneHandler.js");
+const sqlHandler = require("../models/handles/sqlHandler.js");
 
 const trailerTask = require("../crawler/child-work.js");
 
@@ -51,8 +53,8 @@ const movieDetail = async function (ctx, next) {
 
 const getMovieDetail = async function (ctx, next) {
 
-	console.log(JSON.stringify(ctx.request));
-	console.log(JSON.stringify(ctx.request.query));
+	// console.log(JSON.stringify(ctx.request));
+	// console.log(JSON.stringify(ctx.request.query));
 	const doubanId = ctx.request.query.doubanId;
 	const apiUrl = `http://api.douban.com/v2/movie/subject/${doubanId}`;
 	const result = await request({
@@ -87,6 +89,10 @@ const loginAccount = async function (ctx, next) {
 	return await (new loginHandler()).handler(ctx, next);
 };
 
+const exerciseSql = async function (ctx, next) {
+	return await (new sqlHandler()).handler(ctx, next);
+};
+
 const addAccount = async function (ctx, next) {
 	return await (new addAccountHandler()).handler(ctx, next);
 };
@@ -97,6 +103,64 @@ const getMovieList = async function (ctx, next) {
 
 const getMovieOneItem = async function (ctx, next) {
 	return await (new movieItemOneHandler()).handler(ctx, next);
+};
+
+const getScore = async function (ctx, next) {
+	const apiUrl = "http://127.0.0.1:8001/service/marketingActivityService/queryMarketingInfo";
+	const result = await request({
+		url: apiUrl,
+		method: "POST",
+		data: {
+			"page":1,
+			"pageSize":10
+		}
+	});
+	ctx.body = {
+		"result" : result.data,
+		"statesCode" : 200,
+		"message": "查询成功",
+		"success": true
+	};
+	return next();
+};
+
+const addScore = async function (ctx, next) {
+	const apiUrl = "http://127.0.0.1:8001/service/marketingActivityService/addMarketingInfo";
+	const result = await request({
+		url: apiUrl,
+		method: "POST",
+		data: {
+			name:ctx.request.body.params.name,
+			score:parseInt(ctx.request.body.params.score)
+		}
+	});
+	ctx.body = {
+		"result" : result.data,
+		"statesCode" : 200,
+		"message": "添加成功",
+		"success": true
+	};
+	return next();
+};
+
+const updateScore = async function (ctx, next) {
+	const apiUrl = "http://127.0.0.1:8001/service/marketingActivityService/updateMarketingInfo";
+	const result = await request({
+		url: apiUrl,
+		method: "POST",
+		data: {
+			id:parseInt(ctx.request.body.params.id),
+			name:ctx.request.body.params.name,
+			score:parseInt(ctx.request.body.params.score)
+		}
+	});
+	ctx.body = {
+		"result" : result.data,
+		"message": "更新成功",
+		"success": true,
+		"statesCode" : 200
+	};
+	return next();
 };
 
 const trailerAddData = async function (ctx, next) {
@@ -125,5 +189,9 @@ module.exports = {
 	getMovieList,
 	getMovieOneItem,
 	ai,
-	trailerAddData
+	trailerAddData,
+	getScore,
+	addScore,
+	updateScore,
+	exerciseSql
 };

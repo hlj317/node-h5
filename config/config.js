@@ -1,4 +1,4 @@
-const STATIC_PORT = 8000;
+const STATIC_PORT = 8001;
 
 const env = process.env.NODE_ENV;
 

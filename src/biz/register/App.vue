@@ -84,12 +84,38 @@ export default {
     created(){
         this.init();
     },
+
+    mounted(){
+        let a1 = this.getTime(100,1000);
+        let a2 = this.getTime(200,2000);
+        let aa = Promise.all([a1,a2]);
+        aa.then((datas)=>{
+            this.username = datas[0] + "ok";
+        },(data)=>{
+            this.username = data + "err";
+        })
+    },
     components: {
         Popup
     },
     methods:{
        init(){
        },
+        getTime(val,time){
+            let p1 = new Promise((resolve,reject)=>{
+                if(time <= 1000){
+                    setTimeout(()=>{
+                        reject(val);
+                    },time)
+                }else{
+                    setTimeout(()=>{
+                        resolve(val);
+                    },time)   
+                }
+
+            });
+            return p1;
+        },
         isValidate(username,password){
             let phone_test = /^(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[8-9])[0-9]{8}$/,
                 email_test = /^([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\-|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/gi,
@@ -134,6 +160,10 @@ export default {
             })
             .then(res =>{
                 if(res.data.success){
+                    this.$refs.popup.toast({
+                        'title' : res.data.message,
+                        'time' : 2000
+                    });
                     const href = window.location.origin + '/movie';
                     window.location.replace(href);
                 }else{

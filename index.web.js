@@ -17,10 +17,19 @@
 	const mysql = require("./app/models/common/mysql.js");
 
 	const port = process.env.NODE_ENV === "dev" ? "8080" : "80";
-	// const redis = require('./app/service/common/redis.js');
 
 	mysql.init();
-	// redis.init();
+
+	//全局捕获异常中间件
+	// server.use(async (ctx, next) => {
+	// 	try{
+	// 		await next();
+	// 	}catch(e){
+	// 		console.log("**************err");
+	// 		ctx.body = "ok";
+	// 	}
+	// });
+
 
 	// 添加模板引擎
 	server.use(Xtpl({
@@ -30,6 +39,8 @@
 	}));
 
 	const productionAsset = config.productionAsset;
+
+	server.use(middleware.handleError);
 
 	// 添加默认首页
 	server.use(middleware.indexRewrite());
@@ -76,7 +87,7 @@
 	if(process.env.NODE_ENV !== "dev"){
 		await server.ssl("./ssl/3657175_m.xiaohuangren.top.key", "./ssl/3657175_m.xiaohuangren.top.pem");
 	}
-
+	
 	await server.startup(router, port);
 
 	// POST请求都需要有登录态

@@ -113,7 +113,7 @@ let errorRedirect = async (ctx, next) => {
  */
 let checkLogin = async (ctx, next,url) => {
 	console.log(url);
-	if(ctx.request.method !== "POST" || ctx.url === "/addAccount" || ctx.url === "/loginAccount"){
+	if(ctx.url != "/movie"){
 		return next();
 	}
 	let tokenSessionId = ctx.cookies.get("sessionId");
@@ -145,6 +145,16 @@ let homeRewrite = async (ctx,next) => {
 	return next();
 };
 
+let handleError = async (ctx,next) => {
+	console.log("********************hahahahah");
+	try{
+		await next();
+	}catch(e){
+		console.log("**************err");
+		ctx.body = "ok";
+	}
+};
+
 module.exports = {
 	indexRewrite,
 	internalRewrite,
@@ -154,5 +164,6 @@ module.exports = {
 	htmlMinifier,
 	staticMount,
 	checkLogin,
-	homeRewrite
+	homeRewrite,
+	handleError
 };
