@@ -425,7 +425,7 @@ body {
   }
   .plus {
     width: 100%;
-    height: 260 / @b;
+    height: 180 / @b;
   }
 }
 </style>
