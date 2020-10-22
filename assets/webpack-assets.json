@@ -1,11 +1,11 @@
 {
+  "bear": {
+    "js": "/assets/static/bear-425937d4.js",
+    "css": "/assets/static/bear-689cb6dc.css"
+  },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
-  },
-  "error/404": {
-    "js": "/assets/static/error/404-c2556563.js",
-    "css": "/assets/static/error/404-689cb6dc.css"
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-ce4855ca.js",
@@ -41,9 +41,9 @@
     "js": "/assets/static/login-e26af39a.js",
     "css": "/assets/static/login-689cb6dc.css"
   },
-  "bear": {
-    "js": "/assets/static/bear-425937d4.js",
-    "css": "/assets/static/bear-689cb6dc.css"
+  "error/404": {
+    "js": "/assets/static/error/404-c2556563.js",
+    "css": "/assets/static/error/404-689cb6dc.css"
   },
   "detail": {
     "js": "/assets/static/detail-7e231008.js",
@@ -58,8 +58,8 @@
     "css": "/assets/static/phptest-689cb6dc.css"
   },
   "langnav": {
-    "js": "/assets/static/langnav-0a19a26f.js",
-    "css": "/assets/static/langnav-c21da4e1.css"
+    "js": "/assets/static/langnav-06e2dcf2.js",
+    "css": "/assets/static/langnav-f0ae7d7f.css"
   },
   "javatest": {
     "js": "/assets/static/javatest-1742b0ac.js",
