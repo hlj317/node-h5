@@ -88,6 +88,7 @@
           </li>
         </ul>
       </div>
+      <div class="plus"></div>
     </div>
     <ul class="bottom">
       <li class="selected"><a href="javascript:void(0)">{{$t("bottombar.home")}}</a></li>
@@ -421,6 +422,10 @@ body {
         padding: 60 / @b 0 0 0;
       }
     }
+  }
+  .plus {
+    width: 100%;
+    height: 260 / @b;
   }
 }
 </style>
