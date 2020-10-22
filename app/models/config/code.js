@@ -152,7 +152,7 @@ const MAX_GROUP_NAME_LENGTH = 12;
 const SHARE_ADD_LEFT_NUM = 5;
 
 const DEFAULT_WX_NICKNAME = "佚名";
-const DEFAULT_WX_AVATAR = "https://b3.hucdn.com/upload/face/base/img_mine_default_avatar.png";
+const DEFAULT_WX_AVATAR = "https://b3.beicdn.com/upload/face/base/img_mine_default_avatar.png";
 const DEFAULT_WX_NICKNAME_ARR = [
 	"欧阳克",
 	"故人江海别",

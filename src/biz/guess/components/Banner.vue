@@ -11,7 +11,7 @@
         position: relative;
         width: 750/@base;
         height: 200/@base;
-        background: url('//h0.hucdn.com/open/201825/39bab27e549a5e7c_750x200.png') no-repeat;
+        background: url('//h0.beicdn.com/open/201825/39bab27e549a5e7c_750x200.png') no-repeat;
         background-size: 100% 100%;
         .btn-rule {
             position: absolute;

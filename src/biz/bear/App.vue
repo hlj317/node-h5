@@ -30,7 +30,7 @@
             </div>
             <div class="submit-container" @click="submitInfo">
                 <div class="submit-text">{{btnText}}</div>
-                <img class="submit-btn" src="http://h0.hucdn.com/open/201836/3b04552e2b818d4c_351x116.png" alt="">
+                <img class="submit-btn" src="http://h0.beicdn.com/open/201836/3b04552e2b818d4c_351x116.png" alt="">
             </div>
         </div>
     </div>
@@ -312,7 +312,7 @@
     .container {
         width: 100%;
         height: 1334 /@b;
-        background-image: url("http://h0.hucdn.com/open/201836/9dde326371e71862_750x1334.png");
+        background-image: url("http://h0.beicdn.com/open/201836/9dde326371e71862_750x1334.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;

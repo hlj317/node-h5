@@ -45,7 +45,7 @@ export default {
             margin-bottom: 20/@base;
             width: 100%;
             height: 158/@base;
-            background: url('//h0.hucdn.com/open/201824/451a9442d49e2a5b_746x158.png') no-repeat;
+            background: url('//h0.beicdn.com/open/201824/451a9442d49e2a5b_746x158.png') no-repeat;
             background-size: 100% 100%;
             box-sizing: border-box;
             .item-img {

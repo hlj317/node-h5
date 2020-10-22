@@ -51,7 +51,7 @@ export default {
     height: 60/@base;
     left: 0;
     top: 20/@base;
-    background: url('http://h0.hucdn.com/open/201822/c7f40fd612b7c452_120x120.png') no-repeat center center / 100% 100%;
+    background: url('http://h0.beicdn.com/open/201822/c7f40fd612b7c452_120x120.png') no-repeat center center / 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
