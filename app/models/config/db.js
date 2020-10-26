@@ -21,7 +21,7 @@ const DEV = {
 };
 
 const PRO = {
-    host: "rm-bp1e54lj9cm0qz80790130.mysql.rds.aliyuncs.com",
+    host: "rm-bp1e54lj9cm0qz807xo.mysql.rds.aliyuncs.com",
     user: "hlj317",
     password: "@abc123456",
     database: "hlj-test",
