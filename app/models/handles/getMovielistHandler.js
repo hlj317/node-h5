@@ -50,8 +50,6 @@ class movieListHandler extends BaseClass {
         result = await this.run(ctx, next, true, "查询成功", movelistData);
         return result;
     }
-
-
 }
 
 module.exports = movieListHandler;
