@@ -1,84 +1,102 @@
 {
-  "error/404": {
-    "js": "/assets/static/error/404-c2556563.js",
-    "css": "/assets/static/error/404-caa8599e.css"
-  },
-  "bear": {
-    "js": "/assets/static/bear-425937d4.js",
-    "css": "/assets/static/bear-caa8599e.css"
-  },
-  "demo/hello": {
-    "js": "/assets/static/demo/hello-ce4855ca.js",
-    "css": "/assets/static/demo/hello-caa8599e.css"
-  },
-  "demo/hlj": {
-    "js": "/assets/static/demo/hlj-e1950391.js",
-    "css": "/assets/static/demo/hlj-caa8599e.css"
-  },
-  "guess": {
-    "js": "/assets/static/guess-74af9834.js",
-    "css": "/assets/static/guess-caa8599e.css"
-  },
-  "cms": {
-    "js": "/assets/static/cms-5ddee8fd.js",
-    "css": "/assets/static/cms-caa8599e.css"
-  },
-  "": {
-    "json": "/manifest.json",
-    "ttf": "/732389ded34cb9c52dd88271f1345af9.ttf",
-    "png": "/dc3ad901c88194a7c6e527894f11b8a3.png",
-    "woff": "/535877f50039c0cb49a6196a5b7517cd.woff"
-  },
-  "register": {
-    "js": "/assets/static/register-b23587fa.js",
-    "css": "/assets/static/register-caa8599e.css"
-  },
-  "movie": {
-    "js": "/assets/static/movie-948bc851.js",
-    "css": "/assets/static/movie-caa8599e.css"
-  },
-  "login": {
-    "js": "/assets/static/login-e26af39a.js",
-    "css": "/assets/static/login-caa8599e.css"
-  },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
   },
+  "error/404": {
+    "js": "/assets/static/error/404-c2556563.js",
+    "css": "/assets/static/error/404-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "demo/hello": {
+    "js": "/assets/static/demo/hello-ce4855ca.js",
+    "css": "/assets/static/demo/hello-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "demo/hlj": {
+    "js": "/assets/static/demo/hlj-e1950391.js",
+    "css": "/assets/static/demo/hlj-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "guess": {
+    "js": "/assets/static/guess-74af9834.js",
+    "css": "/assets/static/guess-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "cms": {
+    "js": "/assets/static/cms-5ddee8fd.js",
+    "css": "/assets/static/cms-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "": {
+    "json": "/manifest.json",
+    "ttf": "/assets/static/732389de.element-icons.ttf",
+    "png": "/dc3ad901c88194a7c6e527894f11b8a3.png",
+    "woff": "/assets/static/535877f5.element-icons.woff"
+  },
+  "register": {
+    "js": "/assets/static/register-b23587fa.js",
+    "css": "/assets/static/register-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "movie": {
+    "js": "/assets/static/movie-948bc851.js",
+    "css": "/assets/static/movie-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "login": {
+    "js": "/assets/static/login-e26af39a.js",
+    "css": "/assets/static/login-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
+  "bear": {
+    "js": "/assets/static/bear-425937d4.js",
+    "css": "/assets/static/bear-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
   "detail": {
     "js": "/assets/static/detail-7e231008.js",
-    "css": "/assets/static/detail-caa8599e.css"
+    "css": "/assets/static/detail-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "ai": {
     "js": "/assets/static/ai-049cd506.js",
-    "css": "/assets/static/ai-caa8599e.css"
+    "css": "/assets/static/ai-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "phptest": {
     "js": "/assets/static/phptest-4417974a.js",
-    "css": "/assets/static/phptest-caa8599e.css"
+    "css": "/assets/static/phptest-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "langnav": {
     "js": "/assets/static/langnav-5a1632ea.js",
-    "css": "/assets/static/langnav-caa8599e.css"
+    "css": "/assets/static/langnav-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "javatest": {
     "js": "/assets/static/javatest-1742b0ac.js",
-    "css": "/assets/static/javatest-caa8599e.css"
+    "css": "/assets/static/javatest-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "imgtest": {
     "js": "/assets/static/imgtest-3e55c01b.js",
-    "css": "/assets/static/imgtest-caa8599e.css"
+    "css": "/assets/static/imgtest-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "fight": {
     "js": "/assets/static/fight-b20cf007.js",
-    "css": "/assets/static/fight-caa8599e.css"
+    "css": "/assets/static/fight-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "es6": {
     "js": "/assets/static/es6-dbd5938a.js",
-    "css": "/assets/static/es6-caa8599e.css"
+    "css": "/assets/static/es6-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   },
   "changelang": {
     "js": "/assets/static/changelang-f4213679.js",
-    "css": "/assets/static/changelang-caa8599e.css"
+    "css": "/assets/static/changelang-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
   }
 }

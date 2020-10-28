@@ -12,7 +12,7 @@ let prodConfig = webpackProdConfig();
 let config = merge(baseConfig, prodConfig, {
     output: {
         filename: `${projectConfig.assetsPrefix}/libs/[name].js`,
-        chunkFilename: `${projectConfig.assetsPrefix}/libs/[id].js`,
+        chunkFilename: `${projectConfig.assetsPrefix}/libs/[id].js`
     },
     plugins: [
         new ExtractTextPlugin({

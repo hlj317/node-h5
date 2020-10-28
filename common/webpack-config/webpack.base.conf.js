@@ -115,10 +115,7 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                 {
                     test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
                     use: [{
-                        loader: "url-loader",
-                        options: {
-                            limit: 10000
-                        }
+                        loader: "url-loader?limit=8192&name=assets/static/[hash:8].[name].[ext]"
                     }]
                 }
             ],
