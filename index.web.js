@@ -85,7 +85,7 @@
 
     // 开启https服务
     if (process.env.NODE_ENV !== "dev") {
-        await server.ssl("./ssl/3657175_m.xiaohuangren.top.key", "./ssl/3657175_m.xiaohuangren.top.pem");
+        await server.ssl("./ssl/3657175_m.xiaohuangren.top.key", "./ssl/3657175_m.xiaohuangren.top.crt");
     }
 
     await server.startup(router, port);
