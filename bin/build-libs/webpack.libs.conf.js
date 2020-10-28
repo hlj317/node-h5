@@ -10,17 +10,17 @@ let projectConfig = require("../../config/config");
 let prodConfig = webpackProdConfig();
 
 let config = merge(baseConfig, prodConfig, {
-	output: {
-		filename: `${projectConfig.assetsPrefix}/libs/[name].js`,
-		chunkFilename: `${projectConfig.assetsPrefix}/libs/[id].js`,
-	},
-	plugins: [
-		new ExtractTextPlugin({
-			filename: `${projectConfig.assetsPrefix}/libs/[name].css`,
-			allChunks: true,
-		}),
-	],
-    
+    output: {
+        filename: `${projectConfig.assetsPrefix}/libs/[name].js`,
+        chunkFilename: `${projectConfig.assetsPrefix}/libs/[id].js`,
+    },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: `${projectConfig.assetsPrefix}/libs/[name].css`,
+            allChunks: true,
+        }),
+    ],
+
 });
 
 module.exports = config;

@@ -6,6 +6,7 @@ let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let projectConfig = require("../../config/config");
 let ManifestPlugin = require("webpack-manifest-plugin");
 const manifest = require("../../manifest.json");
+const path = require("path");
 // whether to generate source map for production files.
 // disabling this can speed up the build.
 let hashLen = 8;
@@ -14,9 +15,7 @@ let prodConfig = webpackProdConfig(`${__dirname}/../../assets`); // 入参为 we
 let config = merge(baseConfig, prodConfig, {
     output: {
         filename: `${projectConfig.assetsPrefix}/static/[name]-[chunkhash:${hashLen}].js`,
-        chunkFilename: `${projectConfig.assetsPrefix}/static/[id]-[chunkhash:${hashLen}].js`,
-        path: `${__dirname}`,
-        publicPath: "../../"
+        chunkFilename: `${projectConfig.assetsPrefix}/static/[id]-[chunkhash:${hashLen}].js`
     },
     plugins: [
         new ExtractTextPlugin({
