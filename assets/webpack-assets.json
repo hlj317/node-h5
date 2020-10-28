@@ -1,27 +1,27 @@
 {
+  "error/404": {
+    "js": "/assets/static/error/404-c2556563.js",
+    "css": "/assets/static/error/404-6702e13e.css"
+  },
   "bear": {
     "js": "/assets/static/bear-425937d4.js",
-    "css": "/assets/static/bear-689cb6dc.css"
-  },
-  "demo/animate": {
-    "js": "/assets/static/demo/animate-51466b8b.js",
-    "css": "/assets/static/demo/animate-80d94d19.css"
+    "css": "/assets/static/bear-6702e13e.css"
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-ce4855ca.js",
-    "css": "/assets/static/demo/hello-689cb6dc.css"
+    "css": "/assets/static/demo/hello-6702e13e.css"
   },
   "demo/hlj": {
     "js": "/assets/static/demo/hlj-e1950391.js",
-    "css": "/assets/static/demo/hlj-689cb6dc.css"
+    "css": "/assets/static/demo/hlj-6702e13e.css"
   },
   "guess": {
     "js": "/assets/static/guess-74af9834.js",
-    "css": "/assets/static/guess-689cb6dc.css"
+    "css": "/assets/static/guess-6702e13e.css"
   },
   "cms": {
-    "js": "/assets/static/cms-8f6de924.js",
-    "css": "/assets/static/cms-689cb6dc.css"
+    "js": "/assets/static/cms-811b1eae.js",
+    "css": "/assets/static/cms-6702e13e.css"
   },
   "": {
     "json": "/manifest.json",
@@ -31,54 +31,54 @@
   },
   "register": {
     "js": "/assets/static/register-b23587fa.js",
-    "css": "/assets/static/register-689cb6dc.css"
+    "css": "/assets/static/register-6702e13e.css"
   },
   "movie": {
     "js": "/assets/static/movie-948bc851.js",
-    "css": "/assets/static/movie-689cb6dc.css"
+    "css": "/assets/static/movie-6702e13e.css"
   },
   "login": {
     "js": "/assets/static/login-e26af39a.js",
-    "css": "/assets/static/login-689cb6dc.css"
+    "css": "/assets/static/login-6702e13e.css"
   },
-  "error/404": {
-    "js": "/assets/static/error/404-c2556563.js",
-    "css": "/assets/static/error/404-689cb6dc.css"
+  "demo/animate": {
+    "js": "/assets/static/demo/animate-51466b8b.js",
+    "css": "/assets/static/demo/animate-80d94d19.css"
   },
   "detail": {
     "js": "/assets/static/detail-7e231008.js",
-    "css": "/assets/static/detail-689cb6dc.css"
+    "css": "/assets/static/detail-6702e13e.css"
   },
   "ai": {
     "js": "/assets/static/ai-049cd506.js",
-    "css": "/assets/static/ai-689cb6dc.css"
+    "css": "/assets/static/ai-6702e13e.css"
   },
   "phptest": {
     "js": "/assets/static/phptest-4417974a.js",
-    "css": "/assets/static/phptest-689cb6dc.css"
+    "css": "/assets/static/phptest-6702e13e.css"
   },
   "langnav": {
-    "js": "/assets/static/langnav-20c7476a.js",
-    "css": "/assets/static/langnav-191d4f09.css"
+    "js": "/assets/static/langnav-5a1632ea.js",
+    "css": "/assets/static/langnav-6702e13e.css"
   },
   "javatest": {
     "js": "/assets/static/javatest-1742b0ac.js",
-    "css": "/assets/static/javatest-689cb6dc.css"
+    "css": "/assets/static/javatest-6702e13e.css"
   },
   "imgtest": {
     "js": "/assets/static/imgtest-3e55c01b.js",
-    "css": "/assets/static/imgtest-689cb6dc.css"
+    "css": "/assets/static/imgtest-6702e13e.css"
   },
   "fight": {
     "js": "/assets/static/fight-b20cf007.js",
-    "css": "/assets/static/fight-689cb6dc.css"
+    "css": "/assets/static/fight-6702e13e.css"
   },
   "es6": {
-    "js": "/assets/static/es6-31582465.js",
-    "css": "/assets/static/es6-689cb6dc.css"
+    "js": "/assets/static/es6-dbd5938a.js",
+    "css": "/assets/static/es6-6702e13e.css"
   },
   "changelang": {
     "js": "/assets/static/changelang-f4213679.js",
-    "css": "/assets/static/changelang-689cb6dc.css"
+    "css": "/assets/static/changelang-6702e13e.css"
   }
 }

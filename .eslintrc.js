@@ -15,10 +15,7 @@ module.exports = {
         "ecmaVersion": 8
     },
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
+        "indent": 'off',
         "linebreak-style": [
             "error",
             "unix"
@@ -31,13 +28,16 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-console":[
+        "no-alert": [
+            "error"
+        ],
+        "no-console": [
+            "error"
+        ],
+        "no-debugger": [
             "off"
         ],
-        "no-debugger":[
-            "off"
-        ],
-        "no-useless-escape":[
+        "no-useless-escape": [
             "off"
         ]
     }
