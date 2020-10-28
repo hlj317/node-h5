@@ -4,81 +4,81 @@
     "css": "/assets/static/demo/animate-80d94d19.css"
   },
   "error/404": {
-    "js": "/assets/static/error/404-c2556563.js",
-    "css": "/assets/static/error/404-6702e13e.css"
+    "js": "../../assets/static/error/404-e40916bf.js",
+    "css": "../../assets/static/error/404-f656264b.css"
   },
   "demo/hello": {
-    "js": "/assets/static/demo/hello-ce4855ca.js",
-    "css": "/assets/static/demo/hello-6702e13e.css"
+    "js": "../../assets/static/demo/hello-90930c86.js",
+    "css": "../../assets/static/demo/hello-f656264b.css"
   },
   "demo/hlj": {
-    "js": "/assets/static/demo/hlj-e1950391.js",
-    "css": "/assets/static/demo/hlj-6702e13e.css"
+    "js": "../../assets/static/demo/hlj-a9c80654.js",
+    "css": "../../assets/static/demo/hlj-f656264b.css"
   },
   "guess": {
-    "js": "/assets/static/guess-74af9834.js",
-    "css": "/assets/static/guess-6702e13e.css"
+    "js": "../../assets/static/guess-c9e7a590.js",
+    "css": "../../assets/static/guess-f656264b.css"
   },
   "cms": {
-    "js": "/assets/static/cms-826048d7.js",
-    "css": "/assets/static/cms-6ad3fb88.css"
+    "js": "../../assets/static/cms-165319a9.js",
+    "css": "../../assets/static/cms-f656264b.css"
   },
   "": {
-    "json": "/manifest.json",
-    "ttf": "/732389ded34cb9c52dd88271f1345af9.ttf",
+    "json": "../../manifest.json",
+    "ttf": "../../732389ded34cb9c52dd88271f1345af9.ttf",
     "png": "/dc3ad901c88194a7c6e527894f11b8a3.png",
-    "woff": "/535877f50039c0cb49a6196a5b7517cd.woff"
+    "woff": "../../535877f50039c0cb49a6196a5b7517cd.woff"
   },
   "register": {
-    "js": "/assets/static/register-b23587fa.js",
-    "css": "/assets/static/register-6702e13e.css"
+    "js": "../../assets/static/register-96e1d528.js",
+    "css": "../../assets/static/register-f656264b.css"
   },
   "movie": {
-    "js": "/assets/static/movie-948bc851.js",
-    "css": "/assets/static/movie-6702e13e.css"
+    "js": "../../assets/static/movie-3d8d3ad4.js",
+    "css": "../../assets/static/movie-f656264b.css"
   },
   "login": {
-    "js": "/assets/static/login-e26af39a.js",
-    "css": "/assets/static/login-6702e13e.css"
+    "js": "../../assets/static/login-03cdf401.js",
+    "css": "../../assets/static/login-f656264b.css"
   },
   "bear": {
-    "js": "/assets/static/bear-425937d4.js",
-    "css": "/assets/static/bear-6702e13e.css"
+    "js": "../../assets/static/bear-98f5e571.js",
+    "css": "../../assets/static/bear-f656264b.css"
   },
   "detail": {
-    "js": "/assets/static/detail-7e231008.js",
-    "css": "/assets/static/detail-6702e13e.css"
+    "js": "../../assets/static/detail-ed184b69.js",
+    "css": "../../assets/static/detail-f656264b.css"
   },
   "ai": {
-    "js": "/assets/static/ai-049cd506.js",
-    "css": "/assets/static/ai-6702e13e.css"
+    "js": "../../assets/static/ai-9600f403.js",
+    "css": "../../assets/static/ai-f656264b.css"
   },
   "phptest": {
-    "js": "/assets/static/phptest-4417974a.js",
-    "css": "/assets/static/phptest-6702e13e.css"
+    "js": "../../assets/static/phptest-1bfceecf.js",
+    "css": "../../assets/static/phptest-f656264b.css"
   },
   "langnav": {
-    "js": "/assets/static/langnav-5a1632ea.js",
-    "css": "/assets/static/langnav-6702e13e.css"
+    "js": "../../assets/static/langnav-cdf5563c.js",
+    "css": "../../assets/static/langnav-f656264b.css"
   },
   "javatest": {
-    "js": "/assets/static/javatest-1742b0ac.js",
-    "css": "/assets/static/javatest-6702e13e.css"
+    "js": "../../assets/static/javatest-f254bf35.js",
+    "css": "../../assets/static/javatest-f656264b.css"
   },
   "imgtest": {
-    "js": "/assets/static/imgtest-3e55c01b.js",
-    "css": "/assets/static/imgtest-6702e13e.css"
+    "js": "../../assets/static/imgtest-ee77371d.js",
+    "css": "../../assets/static/imgtest-f656264b.css"
   },
   "fight": {
-    "js": "/assets/static/fight-b20cf007.js",
-    "css": "/assets/static/fight-6702e13e.css"
+    "js": "../../assets/static/fight-d99da317.js",
+    "css": "../../assets/static/fight-f656264b.css"
   },
   "es6": {
-    "js": "/assets/static/es6-dbd5938a.js",
-    "css": "/assets/static/es6-6702e13e.css"
+    "js": "../../assets/static/es6-77d37177.js",
+    "css": "../../assets/static/es6-f656264b.css"
   },
   "changelang": {
-    "js": "/assets/static/changelang-f4213679.js",
-    "css": "/assets/static/changelang-6702e13e.css"
+    "js": "../../assets/static/changelang-704705cd.js",
+    "css": "../../assets/static/changelang-f656264b.css"
   }
 }

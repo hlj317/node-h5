@@ -12,22 +12,24 @@ let hashLen = 8;
 let prodConfig = webpackProdConfig(`${__dirname}/../../assets`); // 入参为 webapck-assets.json 文件的存放路径
 
 let config = merge(baseConfig, prodConfig, {
-	output: {
-		filename: `${projectConfig.assetsPrefix}/static/[name]-[chunkhash:${hashLen}].js`,
-		chunkFilename: `${projectConfig.assetsPrefix}/static/[id]-[chunkhash:${hashLen}].js`,
-	},
-	plugins: [
-		new ExtractTextPlugin({
-			filename: `${projectConfig.assetsPrefix}/static/[name]-[hash:${hashLen}].css`,
-			allChunks: true,
-		}),
-		new ManifestPlugin({
-			fileName: "manifest.json",
-			seed: manifest,
-			publicPath: "/",
-		}),
-	],
-    
+    output: {
+        filename: `${projectConfig.assetsPrefix}/static/[name]-[chunkhash:${hashLen}].js`,
+        chunkFilename: `${projectConfig.assetsPrefix}/static/[id]-[chunkhash:${hashLen}].js`,
+        path: `${__dirname}`,
+        publicPath: "../../"
+    },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: `${projectConfig.assetsPrefix}/static/[name]-[hash:${hashLen}].css`,
+            allChunks: true,
+        }),
+        new ManifestPlugin({
+            fileName: "manifest.json",
+            seed: manifest,
+            publicPath: "/",
+        }),
+    ],
+
 });
 
 module.exports = config;

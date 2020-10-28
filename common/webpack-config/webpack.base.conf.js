@@ -11,7 +11,7 @@ const happyThreadPool = HappyPack.ThreadPool({
 });
 
 let baseConfigFunc = (entryPrefix, blackListAry) => {
-    let publicPath = "../../";
+    let publicPath = "/";
     let entries = getEntry(entryPrefix);
     // 过滤service
     let argv;

@@ -5,6 +5,9 @@
             :key="index">
       {{item.html}}
     </el-row>
+    <div style="padding-left: 20px;">
+      <i class="el-icon-message"></i>Basic<i></i>
+    </div>
   </div>
 </template>
 
@@ -27,6 +30,9 @@ export default {
   </script>
 
 <style>
+.el-icon-message::before {
+  content: "\E72B";
+}
 .transition-box {
   margin-bottom: 10px;
   width: 200px;
