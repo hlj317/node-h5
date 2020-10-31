@@ -1,26 +1,26 @@
 {
     "apps": [
         {
-            "name": "m-node-h5-service-dev",
+            "name": "test-node-h5-service-dev",
             "script": "./index.web.js",
             "instances": 1,
             "exec_mode": "fork",
-            "out_file": "/tmp/m-node-h5/m-node-h5_out.log",
-            "error_file": "/tmp/m-node-h5/m-node-h5_err.log",
-            "log_file": "/tmp/m-node-h5/m-node-h5_log.log",
+            "out_file": "/tmp/test-node-h5/test-node-h5_out.log",
+            "error_file": "/tmp/test-node-h5/test-node-h5_err.log",
+            "log_file": "/tmp/test-node-h5/test-node-h5_log.log",
             "env": {
                 "NODE_ENV": "dev"
             },
             "watch": true
         },
         {
-            "name": "m-node-h5-service-production",
+            "name": "test-node-h5-service-production",
             "script": "./index.web.js",
             "instances": 1,
             "exec_mode": "fork",
-            "out_file": "/tmp/m-node-h5/m-node-h5_out.log",
-            "error_file": "/tmp/m-node-h5/m-node-h5_err.log",
-            "log_file": "/tmp/m-node-h5/m-node-h5_log.log",
+            "out_file": "/tmp/test-node-h5/test-node-h5_out.log",
+            "error_file": "/tmp/test-node-h5/test-node-h5_err.log",
+            "log_file": "/tmp/test-node-h5/test-node-h5_log.log",
             "env": {
                 "NODE_ENV": "production"
             },

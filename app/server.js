@@ -22,7 +22,7 @@ class Server extends Koa {
         }, this.callback()).listen(443);
     }
 
-    async startup (router, port = 91) {
+    async startup (router, port = 61) {
         if (port <= 0 || isNaN(port)) {
             throw new Error("服务端口必须 >= 0 且 <= 65535");
         }

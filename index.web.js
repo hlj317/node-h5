@@ -16,7 +16,7 @@
 
     const mysql = require("./app/models/common/mysql.js");
 
-    const port = process.env.NODE_ENV === "dev" ? "9090" : "91";
+    const port = process.env.NODE_ENV === "dev" ? "6060" : "61";
 
     mysql.init();
 
@@ -84,9 +84,9 @@
     }
 
     // 开启https服务
-    if (process.env.NODE_ENV !== "dev") {
-        await server.ssl("./ssl/4689301_m.xiaohuangren.top.key", "./ssl/4689301_m.xiaohuangren.top.pem");
-    }
+    // if (process.env.NODE_ENV !== "dev") {
+    //     await server.ssl("./ssl/4689301_m.xiaohuangren.top.key", "./ssl/4689301_m.xiaohuangren.top.pem");
+    // }
 
     await server.startup(router, port);
 
