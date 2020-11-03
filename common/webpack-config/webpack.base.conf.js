@@ -110,8 +110,8 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                 // },
                 {
                     test: /\.js$/,
-                    loader: "happypack/loader?id=babel",
-                    query: { compact: false }
+                    loader: "happypack/loader",
+                    query: { id: "babel", compact: false }
                 },
                 {
                     test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
