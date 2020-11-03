@@ -111,6 +111,7 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                 {
                     test: /\.js$/,
                     loader: "happypack/loader",
+                    exclude: /node_modules/,
                     query: { id: "babel", compact: false }
                 },
                 {
