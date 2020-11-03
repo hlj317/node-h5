@@ -1,12 +1,12 @@
 {
+  "bear": {
+    "js": "/assets/static/bear-425937d4.js",
+    "css": "/assets/static/bear-80ad67d5.css",
+    "woff": "/assets/static/8.woff"
+  },
   "demo/animate": {
     "js": "/assets/static/demo/animate-51466b8b.js",
     "css": "/assets/static/demo/animate-80d94d19.css"
-  },
-  "error/404": {
-    "js": "/assets/static/error/404-c2556563.js",
-    "css": "/assets/static/error/404-80ad67d5.css",
-    "woff": "/assets/static/8.woff"
   },
   "demo/hello": {
     "js": "/assets/static/demo/hello-ce4855ca.js",
@@ -49,9 +49,9 @@
     "css": "/assets/static/login-80ad67d5.css",
     "woff": "/assets/static/8.woff"
   },
-  "bear": {
-    "js": "/assets/static/bear-425937d4.js",
-    "css": "/assets/static/bear-80ad67d5.css",
+  "error/404": {
+    "js": "/assets/static/error/404-c2556563.js",
+    "css": "/assets/static/error/404-80ad67d5.css",
     "woff": "/assets/static/8.woff"
   },
   "detail": {
