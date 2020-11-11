@@ -18,7 +18,7 @@
     </div>
     <div class="">
       <input type="button"
-             value="登录0590"
+             value="登录09833"
              class="login_btn"
              @click="login" />
     </div>
